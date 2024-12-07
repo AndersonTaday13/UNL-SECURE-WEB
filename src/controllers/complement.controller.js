@@ -16,7 +16,7 @@ export const register = async (req, res) => {
       complement = await Complement.create({
         token: newToken,
         status: true,
-        interval: 0.03,
+        interval: "1",
       });
     }
     res.json(complement);

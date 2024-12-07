@@ -31,8 +31,9 @@ const storageService = {
     if (data.token) storageData[STORAGE_KEYS.TOKEN] = data.token;
     if (data.status !== undefined)
       storageData[STORAGE_KEYS.STATUS] = data.status.toString();
-    if (data.interval)
-      storageData[STORAGE_KEYS.INTERVAL] = data.interval.toString();
+    if (typeof data.interval === "string" && data.interval.trim()) {
+      storageData[STORAGE_KEYS.INTERVAL] = data.interval;
+    }
 
     return new Promise((resolve) => {
       chrome.storage.local.set(storageData, resolve);
@@ -77,3 +78,57 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log("Extensión instalada");
   initializeExtension();
 });
+
+let previousUrl = "";
+
+// Función para enviar la URL al servidor usando Axios
+async function sendUrlToServer(url) {
+  try {
+    const response = await axiosInstance.post(
+      "/receive-url",
+      { url: url },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      console.log("URL enviada exitosamente");
+    } else {
+      console.error("Error al enviar la URL:", response.status);
+    }
+  } catch (error) {
+    console.error("Error al enviar la URL:", error.message);
+  }
+}
+
+// Función para obtener la URL activa
+function getCurrentTab() {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    if (tabs[0] && tabs[0].url) {
+      const currentUrl = tabs[0].url;
+
+      // Solo enviar si la URL ha cambiado
+      if (currentUrl !== previousUrl) {
+        previousUrl = currentUrl;
+        sendUrlToServer(currentUrl);
+      }
+    }
+  });
+}
+
+// Eventos a monitorear
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+  getCurrentTab();
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (changeInfo.url) {
+    getCurrentTab();
+  }
+});
+
+// Verificar periódicamente por cambios (como respaldo)
+setInterval(getCurrentTab, 1000);

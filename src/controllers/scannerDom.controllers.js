@@ -1,28 +1,21 @@
-import { extractUrls } from "../libs/extractUrls.js";
+// urlController.js
 
-async function testExtractor() {
-  try {
-    // 1. Prueba básica con un sitio web simple
-    console.log("Probando con GitHub...");
-    const githubUrls = await extractUrls("https://github.com");
-    console.log(`Encontradas ${githubUrls.length} URLs en GitHub`);
-    console.log("Primeras 5 URLs:", githubUrls.slice(0, 5));
+// Variable para almacenar la última URL recibida
+let lastUrl = "";
 
-    // 2. Prueba con un sitio más complejo
-    console.log("\nProbando con Wikipedia...");
-    const wikiUrls = await extractUrls("https://www.wikipedia.org");
-    console.log(`Encontradas ${wikiUrls.length} URLs en Wikipedia`);
-    console.log("Primeras 5 URLs:", wikiUrls.slice(0, 5));
+// Controlador para manejar la recepción de URLs
+export const receiveUrl = (req, res) => {
+  const { url } = req.body;
 
-    // 3. Prueba con sitio que tenga contenido dinámico
-    console.log("\nProbando con Twitter...");
-    const twitterUrls = await extractUrls("https://twitter.com");
-    console.log(`Encontradas ${twitterUrls.length} URLs en Twitter`);
-    console.log("Primeras 5 URLs:", twitterUrls.slice(0, 5));
-  } catch (error) {
-    console.error("Error durante las pruebas:", error);
+  if (!url) {
+    return res.status(400).json({ message: "No se recibió ninguna URL." });
   }
-}
+  console.log("URL recibida:", url);
 
-// Ejecutar las pruebas
-testExtractor();
+  // Guardar la URL recibida
+  lastUrl = url;
+
+  res
+    .status(200)
+    .json({ message: "URL recibida exitosamente.", receivedUrl: lastUrl });
+};

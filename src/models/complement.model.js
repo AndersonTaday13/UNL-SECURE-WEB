@@ -14,10 +14,10 @@ const complementSchema = new mongoose.Schema(
       default: true,
     },
     interval: {
-      type: Number,
+      type: String,
       required: true,
-      enum: [0.03, 1, 2, 3, 4, 5],
-      default: 0.03,
+      enum: ["DEFAULT", "1", "2", "3", "4", "5"],
+      default: "DEFAULT",
     },
   },
   {
