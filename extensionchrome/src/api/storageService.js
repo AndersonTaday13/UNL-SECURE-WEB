@@ -6,24 +6,64 @@ const STORAGE_KEYS = {
 
 export const storageService = {
   // Métodos para token
-  getToken: () => localStorage.getItem(STORAGE_KEYS.TOKEN),
-  saveToken: (token) => localStorage.setItem(STORAGE_KEYS.TOKEN, token),
+  getToken: () => {
+    return new Promise((resolve) => {
+      chrome.storage.local.get([STORAGE_KEYS.TOKEN], (result) => {
+        resolve(result[STORAGE_KEYS.TOKEN]);
+      });
+    });
+  },
+  saveToken: (token) => {
+    return new Promise((resolve) => {
+      chrome.storage.local.set({ [STORAGE_KEYS.TOKEN]: token }, resolve);
+    });
+  },
 
   // Métodos para status
-  getStatus: () => localStorage.getItem(STORAGE_KEYS.STATUS) === "true",
-  saveStatus: (status) => localStorage.setItem(STORAGE_KEYS.STATUS, status),
+  getStatus: () => {
+    return new Promise((resolve) => {
+      chrome.storage.local.get([STORAGE_KEYS.STATUS], (result) => {
+        resolve(result[STORAGE_KEYS.STATUS] === "true");
+      });
+    });
+  },
+  saveStatus: (status) => {
+    return new Promise((resolve) => {
+      chrome.storage.local.set(
+        { [STORAGE_KEYS.STATUS]: status.toString() },
+        resolve
+      );
+    });
+  },
 
   // Métodos para interval
-  getInterval: () => parseFloat(localStorage.getItem(STORAGE_KEYS.INTERVAL)),
-  saveInterval: (interval) =>
-    localStorage.setItem(STORAGE_KEYS.INTERVAL, interval),
+  getInterval: () => {
+    return new Promise((resolve) => {
+      chrome.storage.local.get([STORAGE_KEYS.INTERVAL], (result) => {
+        resolve(parseFloat(result[STORAGE_KEYS.INTERVAL]) || null);
+      });
+    });
+  },
+  saveInterval: (interval) => {
+    return new Promise((resolve) => {
+      chrome.storage.local.set(
+        { [STORAGE_KEYS.INTERVAL]: interval.toString() },
+        resolve
+      );
+    });
+  },
 
   // Guardar todos los datos del complemento
   saveComplementData: (data) => {
-    if (data.token) localStorage.setItem(STORAGE_KEYS.TOKEN, data.token);
+    const storageData = {};
+    if (data.token) storageData[STORAGE_KEYS.TOKEN] = data.token;
     if (data.status !== undefined)
-      localStorage.setItem(STORAGE_KEYS.STATUS, data.status);
+      storageData[STORAGE_KEYS.STATUS] = data.status.toString();
     if (data.interval)
-      localStorage.setItem(STORAGE_KEYS.INTERVAL, data.interval);
+      storageData[STORAGE_KEYS.INTERVAL] = data.interval.toString();
+
+    return new Promise((resolve) => {
+      chrome.storage.local.set(storageData, resolve);
+    });
   },
 };

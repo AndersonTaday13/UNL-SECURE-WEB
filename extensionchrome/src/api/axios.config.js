@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 
 export const complementService = {
   // Registrar o recuperar complemento
-  register: async () => {
+  /* register: async () => {
     try {
       const storedToken = storageService.getToken();
 
@@ -20,7 +20,7 @@ export const complementService = {
         token: storedToken || undefined,
       });
 
-      // Guardar todos los datos recibidos
+      // Guardar los datos recibidos
       storageService.saveComplementData(response.data);
 
       return response.data;
@@ -29,11 +29,11 @@ export const complementService = {
       throw error.response?.data || error.message;
     }
   },
-
+*/
   // Actualizar estado
   updateStatus: async () => {
     try {
-      const token = storageService.getToken();
+      const token = await storageService.getToken();
       if (!token) throw new Error("No token available");
 
       const response = await axiosInstance.put("/update-State", { token });
@@ -50,7 +50,7 @@ export const complementService = {
   // Actualizar intervalo
   updateInterval: async (interval) => {
     try {
-      const token = storageService.getToken();
+      const token = await storageService.getToken();
       if (!token) throw new Error("No token available");
 
       const response = await axiosInstance.put("/update-Interval", {
@@ -72,7 +72,7 @@ export const urlService = {
   // Reportar URL
   reportUrl: async (url) => {
     try {
-      const token = storageService.getToken();
+      const token = await storageService.getToken();
       if (!token) throw new Error("No token available");
 
       const response = await axiosInstance.post("/report-url", {

@@ -8,7 +8,10 @@
     "128": "/icono.png"
   },
   "description": "UNL SecureWeb, podrás navegar por internet con confianza, sabiendo que estás protegido contra enlaces potencialmente peligrosos.",
-  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "action": {
     "default_popup": "index.html"
   },
@@ -19,7 +22,7 @@
     "notifications"
   ],
   "host_permissions": [
-    "*://*/*"
+    "<all_urls>"
   ],
   "browser_specific_settings": {
     "gecko": {
