@@ -3,6 +3,7 @@ import { generateUniqueToken, validateToken } from "../libs/tokenManager.js";
 
 export const register = async (req, res) => {
   try {
+    const defaultInterval = Complement.schema.path("interval").enumValues[0];
     const { token } = req.body;
     let complement =
       token && validateToken(token)
@@ -16,7 +17,7 @@ export const register = async (req, res) => {
       complement = await Complement.create({
         token: newToken,
         status: true,
-        interval: "1",
+        interval: defaultInterval,
       });
     }
     res.json(complement);
@@ -48,9 +49,14 @@ export const updateInterval = async (req, res) => {
   try {
     const { token, interval } = req.body;
 
-    if (![0.03, 1, 2, 3, 4, 5].includes(interval)) {
+    // Obtener los valores permitidos desde el enum
+    const allowedIntervals = Complement.schema.path("interval").enumValues;
+
+    if (!allowedIntervals.includes(interval)) {
       return res.status(400).json({
-        message: "Intervalo no válido. Debe ser: 0.03, 1, 2, 3, 4 o 5",
+        message: `Intervalo no válido. Debe ser uno de: ${allowedIntervals.join(
+          ", "
+        )}`,
       });
     }
 
@@ -65,6 +71,26 @@ export const updateInterval = async (req, res) => {
     }
 
     res.json(complement);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const loadinterval = async (req, res) => {
+  try {
+    const { token } = req.headers;
+
+    // Obtenemos los valores del enum
+    const intervalValues = Complement.schema.path("interval").enumValues;
+
+    // Obtenemos el intervalo actual del complemento
+    const complement = await Complement.findOne({ token });
+    const currentInterval = complement ? complement.interval : "DEFAULT";
+
+    res.json({
+      intervals: intervalValues,
+      currentInterval: currentInterval,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

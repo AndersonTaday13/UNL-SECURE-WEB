@@ -16,7 +16,14 @@ const complementSchema = new mongoose.Schema(
     interval: {
       type: String,
       required: true,
-      enum: ["DEFAULT", "1", "2", "3", "4", "5"],
+      enum: [
+        "DEFAULT",
+        "1 minuto(s)",
+        "2 minuto(s)",
+        "3 minuto(s)",
+        "4 minuto(s)",
+        "5 minuto(s)",
+      ],
       default: "DEFAULT",
     },
   },
