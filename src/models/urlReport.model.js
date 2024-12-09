@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { boolean } from "zod";
 
 const urlSchema = new mongoose.Schema(
   {
@@ -16,14 +17,13 @@ const urlSchema = new mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: ["maliciosa", "benigna", "pendiente"],
+      enum: ["pendiente", "maliciosa", "benigna"],
       default: "pendiente",
     },
-    descripción: {
-      type: String,
+    active: {
+      type: Boolean,
       required: true,
-      default: "Sin descripción",
-      trim: true,
+      default: true,
     },
   },
   {

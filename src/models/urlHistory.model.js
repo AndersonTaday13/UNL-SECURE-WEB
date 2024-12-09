@@ -18,6 +18,11 @@ const urltSchema = new mongoose.Schema(
       required: true,
       default: true,
     },
+    isMalicious: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
   {
     timestamps: true,

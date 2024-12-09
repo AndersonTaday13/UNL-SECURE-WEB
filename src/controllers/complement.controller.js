@@ -79,11 +79,7 @@ export const updateInterval = async (req, res) => {
 export const loadinterval = async (req, res) => {
   try {
     const { token } = req.headers;
-
-    // Obtenemos los valores del enum
     const intervalValues = Complement.schema.path("interval").enumValues;
-
-    // Obtenemos el intervalo actual del complemento
     const complement = await Complement.findOne({ token });
     const currentInterval = complement ? complement.interval : "DEFAULT";
 

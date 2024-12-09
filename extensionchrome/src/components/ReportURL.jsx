@@ -11,11 +11,9 @@ export const ReportURL = () => {
     setIsLoading(true);
     try {
       await urlService.reportUrl(url);
-      setUrl(""); // Limpiar el input después de éxito
-      // Aquí podrías mostrar un mensaje de éxito
+      setUrl(""); 
     } catch (error) {
       console.error("Error al reportar URL:", error);
-      // Aquí podrías mostrar un mensaje de error
     } finally {
       setIsLoading(false);
     }
