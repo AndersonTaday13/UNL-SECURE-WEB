@@ -9,14 +9,17 @@ const axiosInstance = axios.create({
   },
 });
 
-// Definir claves de almacenamiento
 const STORAGE_KEYS = {
   TOKEN: "complement_token",
   STATUS: "complement_status",
   INTERVAL: "complement_interval",
 };
 
-// Servicio de almacenamiento usando chrome.storage.local
+let currentIntervalId = null;
+let intervalWakeupAlarmName = "intervalWakeupAlarm";
+let previousUrl = "";
+
+// Servicios para almacenamiento local
 const storageService = {
   getToken: () => {
     return new Promise((resolve) => {
@@ -26,12 +29,28 @@ const storageService = {
     });
   },
 
+  getStatus: () => {
+    return new Promise((resolve) => {
+      chrome.storage.local.get([STORAGE_KEYS.STATUS], (result) => {
+        resolve(result[STORAGE_KEYS.STATUS] === "true");
+      });
+    });
+  },
+
+  getInterval: () => {
+    return new Promise((resolve) => {
+      chrome.storage.local.get([STORAGE_KEYS.INTERVAL], (result) => {
+        resolve(result[STORAGE_KEYS.INTERVAL] || "DEFAULT");
+      });
+    });
+  },
+
   saveComplementData: (data) => {
     const storageData = {};
     if (data.token) storageData[STORAGE_KEYS.TOKEN] = data.token;
     if (data.status !== undefined)
       storageData[STORAGE_KEYS.STATUS] = data.status.toString();
-    if (typeof data.interval === "string" && data.interval.trim()) {
+    if (typeof data.interval === "string" || data.interval === "DEFAULT") {
       storageData[STORAGE_KEYS.INTERVAL] = data.interval;
     }
 
@@ -41,7 +60,7 @@ const storageService = {
   },
 };
 
-// Servicio del complemento
+// Servicio para el complemento
 const complementService = {
   register: async () => {
     try {
@@ -51,8 +70,13 @@ const complementService = {
         token: storedToken || undefined,
       });
 
-      // Guardar los datos recibidos en chrome.storage.local
-      await storageService.saveComplementData(response.data);
+      // Mantener el intervalo existente al registrar
+      const currentInterval = await storageService.getInterval();
+      await storageService.saveComplementData({
+        ...response.data,
+        status: true,
+        interval: currentInterval,
+      });
       return response.data;
     } catch (error) {
       console.error("Error en registro:", error);
@@ -61,74 +85,185 @@ const complementService = {
   },
 };
 
-// Función de inicialización
-async function initializeExtension() {
-  console.log("Iniciando registro en segundo plano...");
-
-  try {
-    const registrationData = await complementService.register();
-    console.log("Registro exitoso:", registrationData);
-  } catch (error) {
-    console.error("Error durante el registro:", error);
-  }
-}
-
-// Evento al instalar la extensión
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("Extensión instalada");
-  initializeExtension();
-});
-
-let previousUrl = "";
-
-// Función para enviar la URL al servidor usando Axios
+// Funciones de manejo de URLs
 async function sendUrlToServer(url) {
   try {
-    const response = await axiosInstance.post(
-      "/receive-url",
-      { url: url },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const token = await storageService.getToken();
+    const response = await axiosInstance.post("/receive-url", { url, token });
 
     if (response.status === 200) {
-      console.log("URL enviada exitosamente");
-    } else {
-      console.error("Error al enviar la URL:", response.status);
+      console.log("URL enviada exitosamente:", url);
     }
   } catch (error) {
     console.error("Error al enviar la URL:", error.message);
   }
 }
 
-// Función para obtener la URL activa
-function getCurrentTab() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    if (tabs[0] && tabs[0].url) {
-      const currentUrl = tabs[0].url;
+async function sendUrlsToServer(urls) {
+  try {
+    const token = await storageService.getToken();
+    const response = await axiosInstance.post("/receive-url", { urls, token });
 
-      // Solo enviar si la URL ha cambiado
-      if (currentUrl !== previousUrl) {
-        previousUrl = currentUrl;
-        sendUrlToServer(currentUrl);
-      }
+    if (response.status === 200) {
+      console.log("URLs enviadas exitosamente:", urls);
+    }
+  } catch (error) {
+    console.error("Error al enviar las URLs:", error.message);
+  }
+}
+
+async function getAllOpenTabs() {
+  return new Promise((resolve) => {
+    chrome.tabs.query({}, (tabs) => {
+      const urls = tabs
+        .map((tab) => tab.url)
+        .filter((url) => url && !url.startsWith("chrome://"));
+      resolve(urls);
+    });
+  });
+}
+
+// Funciones de manejo de eventos de pestañas
+function handleTabActivation(activeInfo) {
+  chrome.tabs.get(activeInfo.tabId, async (tab) => {
+    const isActive = await storageService.getStatus();
+    if (isActive && tab.url && tab.url !== previousUrl) {
+      previousUrl = tab.url;
+      await sendUrlToServer(tab.url);
     }
   });
 }
 
-// Eventos a monitorear
-chrome.tabs.onActivated.addListener(function (activeInfo) {
-  getCurrentTab();
+function handleTabUpdate(tabId, changeInfo, tab) {
+  if (changeInfo.url && changeInfo.url !== previousUrl) {
+    storageService.getStatus().then(async (isActive) => {
+      if (isActive) {
+        previousUrl = changeInfo.url;
+        await sendUrlToServer(changeInfo.url);
+      }
+    });
+  }
+}
+
+// Función para configurar la alarma periódica
+function setupAlarm(minutes) {
+  // Limpiamos cualquier alarma existente
+  chrome.alarms.clear(intervalWakeupAlarmName, () => {
+    if (minutes > 0) {
+      // Creamos la nueva alarma con el intervalo especificado
+      chrome.alarms.create(intervalWakeupAlarmName, {
+        periodInMinutes: minutes,
+        delayInMinutes: 0, // Esto hace que se ejecute inmediatamente la primera vez
+      });
+      console.log(`Alarma configurada para ejecutarse cada ${minutes} minutos`);
+    }
+  });
+}
+
+async function processIntervalMonitoring() {
+  const isActive = await storageService.getStatus();
+
+  if (!isActive) {
+    console.log("Monitoreo desactivado");
+    return;
+  }
+
+  const urls = await getAllOpenTabs();
+  console.log(`Procesando ${urls.length} URLs`);
+
+  if (urls.length > 0) {
+    await sendUrlsToServer(urls);
+  }
+}
+
+async function setupUrlMonitoring(isInitial = false) {
+  const isActive = await storageService.getStatus();
+  const interval = await storageService.getInterval();
+
+  // Limpiar monitores existentes
+  if (currentIntervalId) {
+    clearInterval(currentIntervalId);
+    currentIntervalId = null;
+  }
+  chrome.tabs.onActivated.removeListener(handleTabActivation);
+  chrome.tabs.onUpdated.removeListener(handleTabUpdate);
+  chrome.alarms.clearAll();
+
+  if (!isActive) {
+    console.log("Monitoreo desactivado");
+    return;
+  }
+
+  console.log("Configurando monitoreo con intervalo:", interval);
+
+  if (interval === "DEFAULT") {
+    console.log("Iniciando monitoreo en tiempo real (DEFAULT)");
+    chrome.tabs.onActivated.addListener(handleTabActivation);
+    chrome.tabs.onUpdated.addListener(handleTabUpdate);
+    return;
+  }
+
+  const match = interval.match(/^(\d+)\s+minuto\(s\)$/);
+  if (!match) {
+    console.error("Formato de intervalo inválido:", interval);
+    return;
+  }
+
+  const minutes = parseInt(match[1]);
+  if (minutes < 1 || minutes > 5) {
+    console.error("Intervalo fuera de rango permitido (1-5 minutos):", minutes);
+    return;
+  }
+
+  // Configurar la alarma para el intervalo
+  setupAlarm(minutes);
+
+  // Ejecutar inmediatamente si es la primera vez
+  if (isInitial) {
+    await processIntervalMonitoring();
+  }
+}
+
+// Función de inicialización
+async function initializeExtension() {
+  console.log("Iniciando extensión...");
+  try {
+    const registrationData = await complementService.register();
+    console.log("Registro exitoso:", registrationData);
+
+    const interval = await storageService.getInterval();
+    console.log("Restaurando intervalo guardado:", interval);
+    await setupUrlMonitoring(true);
+  } catch (error) {
+    console.error("Error durante la inicialización:", error);
+  }
+}
+
+// Event Listeners
+chrome.runtime.onInstalled.addListener(() => {
+  console.log("Extensión instalada");
+  initializeExtension();
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  if (changeInfo.url) {
-    getCurrentTab();
+chrome.runtime.onStartup.addListener(() => {
+  console.log("Navegador iniciado");
+  initializeExtension();
+});
+
+// Listener para las alarmas
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === intervalWakeupAlarmName) {
+    console.log("Ejecutando monitoreo por alarma");
+    await processIntervalMonitoring();
   }
 });
 
-// Verificar periódicamente por cambios (como respaldo)
-setInterval(getCurrentTab, 1000);
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (
+    namespace === "local" &&
+    (changes[STORAGE_KEYS.STATUS] || changes[STORAGE_KEYS.INTERVAL])
+  ) {
+    console.log("Configuración cambiada, reiniciando monitoreo...");
+    setupUrlMonitoring();
+  }
+});

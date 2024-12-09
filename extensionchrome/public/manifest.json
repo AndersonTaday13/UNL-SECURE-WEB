@@ -19,7 +19,9 @@
     "storage",
     "tabs",
     "activeTab",
-    "notifications"
+    "alarms",
+    "notifications",
+    "background"
   ],
   "host_permissions": [
     "<all_urls>"

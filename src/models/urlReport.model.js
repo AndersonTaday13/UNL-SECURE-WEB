@@ -8,6 +8,11 @@ const urlSchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
+    token: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     status: {
       type: String,
       required: true,
