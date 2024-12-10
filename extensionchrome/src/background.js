@@ -89,7 +89,7 @@ const complementService = {
 async function sendUrlToServer(url) {
   try {
     const token = await storageService.getToken();
-    const response = await axiosInstance.post("/receive-url", { url, token });
+    const response = await axiosInstance.post("/scan", { url, token });
 
     if (response.status === 200) {
       console.log("URL enviada exitosamente:", url);
@@ -102,7 +102,10 @@ async function sendUrlToServer(url) {
 async function sendUrlsToServer(urls) {
   try {
     const token = await storageService.getToken();
-    const response = await axiosInstance.post("/receive-url", { urls, token });
+    const response = await axiosInstance.post("/scan-multiple", {
+      urls,
+      token,
+    });
 
     if (response.status === 200) {
       console.log("URLs enviadas exitosamente:", urls);

@@ -164,3 +164,232 @@ export const extractUrls = async (targetUrl) => {
   }
 };
 */
+import axios from "axios";
+import { JSDOM } from "jsdom";
+import puppeteer from "puppeteer";
+import { Worker, isMainThread, parentPort, workerData } from 'worker_threads';
+
+export const extractUrls = async (targetUrl, options = {}) => {
+  const {
+    timeout = 15000,
+    maxRedirects = 3,
+    concurrent = true,
+    useWorkers = true,
+    cacheResults = true
+  } = options;
+
+  // Cache para URLs ya procesadas
+  const urlCache = new Map();
+  const urls = new Set();
+
+  // Regex optimizada usando un único patrón
+  const URL_REGEX = new RegExp([
+    // URLs con protocolo
+    '(?:https?:)?//',
+    // Dominio y subdominio
+    '(?:(?:[a-z0-9][a-z0-9-]*[a-z0-9])\\.)+',
+    // TLD
+    '[a-z]{2,}',
+    // Puerto opcional y path
+    '(?::\\d{2,5})?(?:/[^\\s"\'<>(){}\\[\\]]*)?'
+  ].join(''), 'gi');
+
+  // Worker para procesamiento paralelo
+  const createWorker = (task, data) => {
+    return new Promise((resolve, reject) => {
+      const worker = new Worker(`
+        const { parentPort, workerData } = require('worker_threads');
+        ${task.toString()}
+        (async () => {
+          try {
+            const result = await task(workerData);
+            parentPort.postMessage(result);
+          } catch (error) {
+            parentPort.postMessage({ error: error.message });
+          }
+        })();
+      `, { eval: true, workerData: data });
+
+      worker.on('message', resolve);
+      worker.on('error', reject);
+      worker.on('exit', (code) => {
+        if (code !== 0) reject(new Error(`Worker stopped with exit code ${code}`));
+      });
+    });
+  };
+
+  // Función optimizada para normalizar URLs
+  const normalizeUrl = (() => {
+    const cache = new Map();
+    return (url, base) => {
+      const key = `${url}|${base}`;
+      if (cache.has(key)) return cache.get(key);
+      try {
+        const normalized = new URL(url, base).href;
+        cache.set(key, normalized);
+        return normalized;
+      } catch {
+        cache.set(key, null);
+        return null;
+      }
+    };
+  })();
+
+  // Procesamiento en memoria compartida para múltiples workers
+  const sharedUrls = new Set();
+  
+  try {
+    // Ejecutar extracciones en paralelo con workers
+    const tasks = [];
+
+    // 1. Worker para Puppeteer
+    if (useWorkers) {
+      tasks.push(createWorker(async ({ url, timeout }) => {
+        const browser = await puppeteer.launch({
+          headless: true,
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-web-security',
+            '--disable-features=IsolateOrigins,site-per-process'
+          ]
+        });
+
+        try {
+          const page = await browser.newPage();
+          
+          // Optimizar rendimiento de página
+          await Promise.all([
+            page.setCacheEnabled(true),
+            page.setRequestInterception(true),
+            page.setJavaScriptEnabled(true),
+            page.setBypassCSP(true)
+          ]);
+
+          // Interceptar y optimizar requests
+          page.on('request', request => {
+            if (['image', 'stylesheet', 'font', 'media'].includes(request.resourceType())) {
+              request.abort();
+            } else {
+              const url = request.url();
+              if (url.startsWith('http')) sharedUrls.add(url);
+              request.continue();
+            }
+          });
+
+          // Cargar página con timeout optimizado
+          await page.goto(url, {
+            waitUntil: 'domcontentloaded',
+            timeout
+          });
+
+          // Extraer URLs en una sola evaluación
+          const foundUrls = await page.evaluate(() => {
+            const urls = new Set();
+            const seen = new Set();
+
+            const addUrl = (url) => {
+              if (url && url.startsWith('http') && !seen.has(url)) {
+                seen.add(url);
+                urls.add(url);
+              }
+            };
+
+            // Selector optimizado para todos los elementos relevantes
+            const elements = document.querySelectorAll(
+              'a[href], img[src], script[src], link[href], iframe[src], source[src], video[src], audio[src], embed[src]'
+            );
+
+            elements.forEach(el => {
+              addUrl(el.src || el.href);
+            });
+
+            // Buscar URLs en atributos data-* y estilos
+            document.querySelectorAll('[data-*], [style]').forEach(el => {
+              Array.from(el.attributes).forEach(attr => {
+                if (attr.value.startsWith('http')) {
+                  addUrl(attr.value);
+                }
+              });
+            });
+
+            return Array.from(urls);
+          });
+
+          foundUrls.forEach(url => sharedUrls.add(url));
+          
+          await browser.close();
+          return Array.from(sharedUrls);
+        } catch (error) {
+          await browser.close();
+          throw error;
+        }
+      }, { url: targetUrl, timeout }));
+    }
+
+    // 2. Worker para análisis estático
+    if (useWorkers) {
+      tasks.push(createWorker(async ({ url, timeout, maxRedirects }) => {
+        const response = await axios.get(url, {
+          timeout,
+          maxRedirects,
+          headers: {
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept': 'text/html,application/xhtml+xml',
+            'User-Agent': 'Mozilla/5.0'
+          },
+          decompress: true
+        });
+
+        const html = response.data;
+        const staticUrls = new Set();
+
+        // Extraer URLs con regex optimizada
+        const matches = html.matchAll(URL_REGEX);
+        for (const match of matches) {
+          if (match[0].startsWith('http')) {
+            staticUrls.add(match[0]);
+          }
+        }
+
+        // Análisis DOM optimizado
+        const dom = new JSDOM(html);
+        const document = dom.window.document;
+
+        // Query selector optimizado
+        document.querySelectorAll(
+          '[href], [src], [data-*]'
+        ).forEach(el => {
+          const url = el.href || el.src;
+          if (url?.startsWith('http')) {
+            staticUrls.add(url);
+          }
+        });
+
+        return Array.from(staticUrls);
+      }, { url: targetUrl, timeout, maxRedirects }));
+    }
+
+    // Ejecutar tasks en paralelo
+    const results = await Promise.all(tasks);
+    
+    // Combinar y normalizar resultados
+    results.flat().forEach(url => {
+      const normalized = normalizeUrl(url, targetUrl);
+      if (normalized) urls.add(normalized);
+    });
+
+    // Guardar en cache si está habilitado
+    if (cacheResults) {
+      urlCache.set(targetUrl, Array.from(urls));
+    }
+
+    return Array.from(urls);
+
+  } catch (error) {
+    console.error("Error durante la extracción de URLs:", error.message);
+    return Array.from(urls);
+  }
+};

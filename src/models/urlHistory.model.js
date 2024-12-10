@@ -13,7 +13,7 @@ const urltSchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
-    status: {
+    active: {
       type: Boolean,
       required: true,
       default: true,
@@ -21,7 +21,6 @@ const urltSchema = new mongoose.Schema(
     isMalicious: {
       type: Boolean,
       required: true,
-      default: false,
     },
   },
   {
@@ -29,4 +28,4 @@ const urltSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Url", urltSchema);
+export default mongoose.model("Urls-historial", urltSchema);
