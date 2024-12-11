@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { complementService } from "../api/axios.config";
 import { storageService } from "../api/storageService";
+import { notifications } from "../services/notifications.service.js";
 
 export const ProtectionStatus = () => {
   const [isActive, setIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Efecto para cargar el estado inicial
   useEffect(() => {
     const initializeStatus = async () => {
       try {
         setIsLoading(true);
-        // Obtener el estado del almacenamiento local
         const storedStatus = await storageService.getStatus();
         setIsActive(storedStatus);
       } catch (error) {
         console.error("Error al cargar el estado inicial:", error);
+        notifications.error(
+          "Error al cargar el estado",
+          "No se pudo obtener el estado inicial"
+        );
       } finally {
         setIsLoading(false);
       }
@@ -27,14 +30,23 @@ export const ProtectionStatus = () => {
   const handleToggle = async () => {
     try {
       setIsLoading(true);
-      // Actualizar en el backend
+
+      notifications.loading(complementService.updateStatus(), {
+        loading: "Actualizando estado...",
+        success: "Estado actualizado correctamente",
+        error: "Error al actualizar el estado",
+      });
+
       const result = await complementService.updateStatus();
-      // Guardar en el almacenamiento local
+
       await storageService.saveStatus(result.status);
       setIsActive(result.status);
     } catch (error) {
       console.error("Error al actualizar estado:", error);
-      // Revertir al estado anterior en caso de error
+      notifications.error(
+        "Error al actualizar estado",
+        "Ocurrió un error al cambiar el estado."
+      );
       const currentStatus = await storageService.getStatus();
       setIsActive(currentStatus);
     } finally {

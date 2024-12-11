@@ -1,4 +1,4 @@
-import downloadThreatIntel from "./threatIntelDownloader.js";
+import downloadThreatIntel from "./threatIntelDownloader.libs.js";
 import cron from "node-cron";
 
 const task = cron.schedule("*/30 * * * *", () => {

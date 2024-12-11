@@ -1,5 +1,8 @@
 import Complement from "../models/complement.model.js";
-import { generateUniqueToken, validateToken } from "../libs/tokenManager.js";
+import {
+  generateUniqueToken,
+  validateToken,
+} from "../libs/tokenManager.libs.js";
 
 export const register = async (req, res) => {
   try {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { complementService } from "../api/axios.config";
+import { notifications } from "../services/notifications.service.js";
 
 export const ScanConfig = () => {
   const [scanInterval, setScanInterval] = useState("");
@@ -10,7 +11,6 @@ export const ScanConfig = () => {
   useEffect(() => {
     const loadIntervals = async () => {
       try {
-        // Cargar intervalos del backend
         const { intervals, currentInterval } =
           await complementService.getIntervals();
         setIntervals(intervals);
@@ -18,6 +18,10 @@ export const ScanConfig = () => {
       } catch (err) {
         setError("Error al cargar los intervalos");
         console.error("Error:", err);
+        notifications.error(
+          "Error",
+          "Hubo un problema al cargar los intervalos."
+        );
       } finally {
         setLoading(false);
       }
@@ -36,10 +40,17 @@ export const ScanConfig = () => {
     try {
       await complementService.updateInterval(scanInterval);
       setError(null);
-      // Opcional: Mostrar mensaje de éxito
+      notifications.success(
+        "Éxito",
+        "El intervalo se ha actualizado correctamente."
+      );
     } catch (err) {
       setError("Error al actualizar el intervalo");
       console.error("Error:", err);
+      notifications.error(
+        "Error",
+        "Ocurrió un problema al actualizar el intervalo."
+      );
     }
   };
 
