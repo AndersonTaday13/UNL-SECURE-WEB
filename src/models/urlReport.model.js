@@ -30,4 +30,6 @@ const urlSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Url-report", urlSchema);
+urlSchema.index({ token: 1, active: 1 });
+
+export default mongoose.model("Urls-reports", urlSchema);

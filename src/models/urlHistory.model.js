@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const urltSchema = new mongoose.Schema(
+const urlSchema = new mongoose.Schema(
   {
     token: {
       type: String,
@@ -28,4 +28,6 @@ const urltSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Urls-historial", urltSchema);
+urlSchema.index({ token: 1, active: 1 });
+
+export default mongoose.model("Urls-historial", urlSchema);
