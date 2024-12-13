@@ -60,7 +60,6 @@ const storageService = {
   },
 };
 
-// Servicio para el complemento
 const complementService = {
   register: async () => {
     try {
@@ -70,7 +69,6 @@ const complementService = {
         token: storedToken || undefined,
       });
 
-      // Mantener el intervalo existente al registrar
       const currentInterval = await storageService.getInterval();
       await storageService.saveComplementData({
         ...response.data,
@@ -85,7 +83,6 @@ const complementService = {
   },
 };
 
-// Funciones de manejo de URLs
 async function sendUrlToServer(url) {
   try {
     const token = await storageService.getToken();
@@ -126,7 +123,6 @@ async function getAllOpenTabs() {
   });
 }
 
-// Funciones de manejo de eventos de pestañas
 function handleTabActivation(activeInfo) {
   chrome.tabs.get(activeInfo.tabId, async (tab) => {
     const isActive = await storageService.getStatus();
@@ -148,15 +144,12 @@ function handleTabUpdate(tabId, changeInfo, tab) {
   }
 }
 
-// Función para configurar la alarma periódica
 function setupAlarm(minutes) {
-  // Limpiamos cualquier alarma existente
   chrome.alarms.clear(intervalWakeupAlarmName, () => {
     if (minutes > 0) {
-      // Creamos la nueva alarma con el intervalo especificado
       chrome.alarms.create(intervalWakeupAlarmName, {
         periodInMinutes: minutes,
-        delayInMinutes: 0, // Esto hace que se ejecute inmediatamente la primera vez
+        delayInMinutes: 0,
       });
       console.log(`Alarma configurada para ejecutarse cada ${minutes} minutos`);
     }
@@ -183,7 +176,6 @@ async function setupUrlMonitoring(isInitial = false) {
   const isActive = await storageService.getStatus();
   const interval = await storageService.getInterval();
 
-  // Limpiar monitores existentes
   if (currentIntervalId) {
     clearInterval(currentIntervalId);
     currentIntervalId = null;
@@ -218,16 +210,13 @@ async function setupUrlMonitoring(isInitial = false) {
     return;
   }
 
-  // Configurar la alarma para el intervalo
   setupAlarm(minutes);
 
-  // Ejecutar inmediatamente si es la primera vez
   if (isInitial) {
     await processIntervalMonitoring();
   }
 }
 
-// Función de inicialización
 async function initializeExtension() {
   console.log("Iniciando extensión...");
   try {
@@ -242,7 +231,6 @@ async function initializeExtension() {
   }
 }
 
-// Event Listeners
 chrome.runtime.onInstalled.addListener(() => {
   console.log("Extensión instalada");
   initializeExtension();
@@ -253,7 +241,6 @@ chrome.runtime.onStartup.addListener(() => {
   initializeExtension();
 });
 
-// Listener para las alarmas
 chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm.name === intervalWakeupAlarmName) {
     console.log("Ejecutando monitoreo por alarma");

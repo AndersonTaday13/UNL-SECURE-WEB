@@ -90,11 +90,10 @@ export const urlService = {
         throw new Error("Token no encontrado. Por favor, inicia sesión.");
       }
 
-      // Hacer la solicitud al backend
       const response = await axiosInstance.post(
         "/download-report",
         { token },
-        { responseType: "blob" } // Importante para recibir el archivo como blob
+        { responseType: "blob" }
       );
 
       // Crear un blob para el PDF
