@@ -1,0 +1,41 @@
+name: Lint Backend Codebase
+
+on:
+  push:
+    branches:
+      - main  # Ejecutar al hacer push en la rama principal
+  pull_request:  # Ejecutar en todos los pull requests
+
+jobs:
+  lint-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Configurar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.0 # Ajusta según la versión de Node.js que usas en el backend
+
+      # Instalar dependencias del backend
+      - name: Install backend dependencies
+        working-directory: ./server
+        run: npm install
+
+      # Ejecutar ESLint en el backend
+      - name: Run ESLint on backend
+        working-directory: ./server
+        run: npx eslint . --ext .js,.jsx
+
+      # Verificar el archivo de configuración ESLint
+      - name: Check ESLint configuration
+        working-directory: ./server
+        run: |
+          if [ ! -f ./eslint.config.js ]; then
+            echo "eslint.config.js not found in ./server";
+            exit 1;
+          fi
