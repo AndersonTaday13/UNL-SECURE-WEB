@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #003366;
+  margin-bottom: 30px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-right {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  /* Tamaño más grande para el logo */
+  height: auto;
+}
+
+.institution-name {
+  color: #003366;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+  /* Centrado */
+}
+
+.career-name {
+  color: #666;
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: center;
+  /* Centrado */
+}
+
+.system-name {
+  color: #003366;
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Separación con las otras frases */
+}
+
+.report-type {
+  color: #666;
+  font-size: 18px;
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+.centered-text {
+  text-align: justify;
+  margin: 0 auto;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}

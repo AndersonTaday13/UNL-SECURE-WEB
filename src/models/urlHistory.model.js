@@ -28,6 +28,6 @@ const urlSchema = new mongoose.Schema(
   }
 );
 
-urlSchema.index({ token: 1, active: 1 });
+urlSchema.index({ token: 1, active: 1, isMalicious: 1 });
 
 export default mongoose.model("Urls-historial", urlSchema);

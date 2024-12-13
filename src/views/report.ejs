@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de URLs</title>
+    <link rel="stylesheet" href="<%= `data:text/css;base64,${cssBase64}` %>">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="data:image/png;base64,<%= logoBase64 %>" alt="Logo UNL" class="logo">
+        </div>
+        <div class="header-right">
+            <p class="institution-name">Universidad Nacional de Loja</p>
+            <p class="career-name">Carrera de Computación</p>
+        </div>
+    </div>
+
+            <div class="header-center">
+                <h1 class="system-name">SECURE WEB UNL</h1>
+
+            </div>
+
+    <div class="centered-text">
+        A continuación se presenta una tabla con los resultados del análisis de URLs maliciosas realizadas en el sistema. En este análisis se recolectaron un total de <%= countActiveUrls %> URLs en los sitios web analizados, de las cuales fueron identificadas como maliciosas aquellas que coinciden con las entradas en la lista negra obtenida de fuentes especializadas como OpenPhish y URLhaus. La siguiente tabla detalla cada URL detectada como maliciosa.
+    </div>
+
+
+    <h2>URLs Maliciosas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% maliciousUrls.forEach(urlObj=> { %>
+                <tr>
+                    <td>
+                        <%= urlObj.url %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+    <div class="centered-text">
+        La siguiente tabla presenta una lista de URLs sospechosas que han sido reportadas por los usuarios a través del sistema.
+    </div>
+
+    <h2>URLs en Reporte</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% reportUrls.forEach(urlObj=> { %>
+                <tr>
+                    <td>
+                        <%= urlObj.url %>
+                    </td>
+                    <td>
+                        <%= urlObj.status %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+    <p><strong>Total de URLs en reportadas:</strong>
+        <%= countReportUrls %>
+    </p>
+</body>
+
+</html>

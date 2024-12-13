@@ -82,4 +82,32 @@ export const urlService = {
       throw error.response?.data || error.message;
     }
   },
+  generateReport: async () => {
+    try {
+      // Obtener el token del storage
+      const token = await storageService.getToken();
+      if (!token) {
+        throw new Error("Token no encontrado. Por favor, inicia sesión.");
+      }
+
+      // Hacer la solicitud al backend
+      const response = await axiosInstance.post(
+        "/download-report",
+        { token },
+        { responseType: "blob" } // Importante para recibir el archivo como blob
+      );
+
+      // Crear un blob para el PDF
+      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+
+      // Crear una URL temporal para el archivo PDF
+      const pdfUrl = window.URL.createObjectURL(pdfBlob);
+
+      // Devolver la URL para que sea manejada en el frontend
+      return pdfUrl;
+    } catch (error) {
+      console.error("Error generando el reporte PDF:", error);
+      throw new Error("No se pudo generar el reporte.");
+    }
+  },
 };

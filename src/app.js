@@ -1,12 +1,19 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
+import path from "path";
+
 import complementoRoutes from "./routes/complement.route.js";
 import urlReport from "./routes/urlReport.route.js";
 import scannerURL from "./routes/scanner.route.js";
-import cors from "cors";
 import task from "./libs/scheduledTasks.libs.js";
+import downloadRouter from "./routes/downloadReport.route.js";
 
 const app = express();
+
+app.use(express.static(path.join(path.resolve(), "src", "public")));
+app.set("views", path.join(path.resolve(), "src", "views"));
+app.set("view engine", "ejs");
 
 app.use(
   cors({
@@ -23,5 +30,6 @@ task.start();
 app.use("/api", complementoRoutes);
 app.use("/api", urlReport);
 app.use("/api", scannerURL);
+app.use("/api", downloadRouter);
 
 export default app;
