@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "version": "1.0.0",
   "name": "UNL SecureWeb",
-  "description": "UNL SecureWeb, podrás navegar por internet con confianza, sabiendo que estás protegido contra enlaces potencialmente peligrosos.",
+  "description": "Complemento para identifcar URLs maliciosas",
   "icons": {
     "16": "/icono.png",
     "48": "/icono.png",
