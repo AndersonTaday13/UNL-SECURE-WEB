@@ -11,11 +11,6 @@ const blackListSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    cont: {
-      type: Number,
-      required: true,
-      default: 0,
-    },
   },
   {
     timestamps: true,

@@ -10,7 +10,6 @@ const urlSchema = new mongoose.Schema(
     url: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     active: {
@@ -18,16 +17,14 @@ const urlSchema = new mongoose.Schema(
       required: true,
       default: true,
     },
-    isMalicious: {
-      type: Boolean,
-      required: true,
-    },
   },
   {
     timestamps: true,
   }
 );
 
-urlSchema.index({ token: 1, active: 1, isMalicious: 1 });
+// Índices para optimizar las consultas
+urlSchema.index({ token: 1, active: 1 }); // Consulta por token y estado
+urlSchema.index({ token: 1, url: 1 }, { unique: true }); // Evitar duplicados por token + url
 
 export default mongoose.model("Urls-historial", urlSchema);

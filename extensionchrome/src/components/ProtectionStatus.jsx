@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { complementService } from "../api/axios.config";
-import { storageService } from "../api/storageService";
+import { storageService } from "../services/storage.service.js";
 import { notifications } from "../services/notifications.service.js";
+
 
 export const ProtectionStatus = () => {
   const [isActive, setIsActive] = useState(false);

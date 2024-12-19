@@ -1,11 +1,7 @@
 import express from "express";
 const router = express.Router();
-import {
-  scanUrl,
-  scanMultipleUrls,
-} from "../controllers/scannerDom.controllers.js";
+import { scanMultipleUrls } from "../controllers/scanner.controller.js";
 
-router.post("/scan", scanUrl);
 router.post("/scan-multiple", scanMultipleUrls);
 
 export default router;

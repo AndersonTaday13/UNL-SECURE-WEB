@@ -1,23 +1,12 @@
-import axios from "axios";
-import { storageService } from "./storageService.js";
-
-const API_URL = "http://localhost:3000/api";
-
-const axiosInstance = axios.create({
-  baseURL: API_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+import { storageService } from "../services/storage.service.js";
+import { axiosInstance } from "../services/axiosInstance.service.js";
 
 export const complementService = {
-  // Actualizar estado
   updateStatus: async () => {
     try {
       const token = await storageService.getToken();
       if (!token) throw new Error("No token available");
       const response = await axiosInstance.put("/update-State", { token });
-      // Actualizar el estado en localStorage
       storageService.saveStatus(response.data.status);
       return response.data;
     } catch (error) {
@@ -34,7 +23,6 @@ export const complementService = {
         headers: { token },
       });
 
-      // Guardar el intervalo actual en localStorage
       if (response.data.currentInterval) {
         await storageService.saveInterval(response.data.currentInterval);
       }
@@ -45,7 +33,6 @@ export const complementService = {
     }
   },
 
-  // Actualizar intervalo
   updateInterval: async (interval) => {
     try {
       const token = await storageService.getToken();
@@ -56,7 +43,6 @@ export const complementService = {
         interval,
       });
 
-      // Actualizar el intervalo en localStorage
       await storageService.saveInterval(response.data.interval);
 
       return response.data;
@@ -67,7 +53,6 @@ export const complementService = {
 };
 
 export const urlService = {
-  // Reportar URL
   reportUrl: async (url) => {
     try {
       const token = await storageService.getToken();
@@ -84,7 +69,6 @@ export const urlService = {
   },
   generateReport: async () => {
     try {
-      // Obtener el token del storage
       const token = await storageService.getToken();
       if (!token) {
         throw new Error("Token no encontrado. Por favor, inicia sesión.");
@@ -96,13 +80,9 @@ export const urlService = {
         { responseType: "blob" }
       );
 
-      // Crear un blob para el PDF
       const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-
-      // Crear una URL temporal para el archivo PDF
       const pdfUrl = window.URL.createObjectURL(pdfBlob);
 
-      // Devolver la URL para que sea manejada en el frontend
       return pdfUrl;
     } catch (error) {
       console.error("Error generando el reporte PDF:", error);

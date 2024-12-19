@@ -2,29 +2,44 @@
   "manifest_version": 3,
   "version": "1.0.0",
   "name": "UNL SecureWeb",
+  "description": "UNL SecureWeb, podrás navegar por internet con confianza, sabiendo que estás protegido contra enlaces potencialmente peligrosos.",
   "icons": {
     "16": "/icono.png",
     "48": "/icono.png",
     "128": "/icono.png"
   },
-  "description": "UNL SecureWeb, podrás navegar por internet con confianza, sabiendo que estás protegido contra enlaces potencialmente peligrosos.",
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": "/icono.png"
   },
   "permissions": [
     "storage",
     "tabs",
     "activeTab",
     "alarms",
+    "scripting",
     "notifications",
-    "background"
+    "webNavigation",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
   ],
-  "host_permissions": [
-    "<all_urls>"
+ "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*", "icono.png", "services/*", "warning.html",
+        "warning.js"],
+      "matches": ["<all_urls>"]
+    }
   ],
   "browser_specific_settings": {
     "gecko": {
