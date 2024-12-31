@@ -1,0 +1,17 @@
+FROM node:22
+
+# Crea el directorio de trabajo
+WORKDIR /usr/src/app
+
+# Copia y instala las dependencias antes que el código
+COPY package*.json ./
+RUN npm install
+
+# Copia el resto del código
+COPY . .
+
+# Expone el puerto que utiliza tu backend
+EXPOSE 3030
+
+# Comando para iniciar la aplicación
+CMD ["npm", "start"]
