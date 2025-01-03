@@ -1,9 +1,9 @@
-// direccion src/background.js:
+// background.js
 import { complementService } from "./services/complement.service.js";
 import { storageService } from "./services/storage.service.js";
 import { declarativeNetRequestService } from "./services/declarativeNetRequest.service.js";
 
-// Función principal que inicializa la extensión
+// Inicialización de la extensión
 async function initializeExtension() {
   console.log("Iniciando extensión...");
 
@@ -12,6 +12,7 @@ async function initializeExtension() {
     console.log("Registro exitoso:", registrationData);
     const blockedUrls = await storageService.getUrls();
     console.log("URLs bloqueadas:", blockedUrls);
+
     // Configurar las reglas de bloqueo
     declarativeNetRequestService.setBlockingRules(blockedUrls);
   } catch (error) {
@@ -19,14 +20,13 @@ async function initializeExtension() {
   }
 }
 
-// Listener para mensajes de `content.js` (esto es para recolectar las URLs)
-chrome.runtime.onMessage.addListener(async (message) => {
+// Listener para mensajes desde content.js
+chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+  try {
+    if (message.action === "collect_urls") {
+      const urls = message.data;
+      console.log("URLs recibidas para procesar:", urls);
 
-  if (message.action === "collect_urls") {
-    const urls = message.data;
-    console.log("URLs recibidas para procesar:", urls);
-
-    try {
       const response = await complementService.sendUrlsToBackend(urls);
       console.log("URLs procesadas por backend:", response);
 
@@ -34,26 +34,36 @@ chrome.runtime.onMessage.addListener(async (message) => {
         await storageService.saveUrls(response);
 
         const blockedUrls = await storageService.getUrls();
-        console.log("URLs COMPLETAS a bloquear:", blockedUrls);
+        console.log("URLs completas a bloquear:", blockedUrls);
 
         declarativeNetRequestService.setBlockingRules(blockedUrls);
       } else {
         console.warn("El backend no devolvió URLs para bloquear");
       }
-    } catch (error) {
-      console.error("Error procesando URLs:", error);
+
+      sendResponse({ success: true });
+    } else {
+      console.warn("Acción no reconocida:", message.action);
+      sendResponse({ success: false, error: "Acción no reconocida" });
     }
+  } catch (error) {
+    console.error("Error procesando URLs:", error);
+    sendResponse({ success: false, error: error.message });
   }
+  return true; // Indica que la respuesta es asíncrona
 });
 
-// Evento de instalación de la extensión
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("Extensión instalada");
-  initializeExtension();
-});
+// Eventos de instalación y inicio
+if (!chrome.runtime.onInstalled.hasListener(initializeExtension)) {
+  chrome.runtime.onInstalled.addListener(() => {
+    console.log("Extensión instalada");
+    initializeExtension();
+  });
+}
 
-// Evento de inicio del navegador
-chrome.runtime.onStartup.addListener(() => {
-  console.log("Navegador iniciado");
-  initializeExtension();
-});
+if (!chrome.runtime.onStartup.hasListener(initializeExtension)) {
+  chrome.runtime.onStartup.addListener(() => {
+    console.log("Navegador iniciado");
+    initializeExtension();
+  });
+}

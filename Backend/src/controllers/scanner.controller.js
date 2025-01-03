@@ -4,6 +4,8 @@ import UrlHistory from "../models/urlHistory.model.js";
 export const scanMultipleUrls = async (req, res) => {
   try {
     const { urls, token } = req.body;
+    const fecha = new Date();
+    console.log(`[${fecha.toLocaleString()}] Escaneo de URLs iniciado`);
     console.log("Datos recibidos en el backend un total de urls:", urls.length);
 
     if (!Array.isArray(urls) || typeof token !== "string") {
