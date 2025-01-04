@@ -6,43 +6,43 @@ export const scanMultipleUrls = async (req, res) => {
     const { urls, token } = req.body;
     const fecha = new Date();
     console.log(`[${fecha.toLocaleString()}] Escaneo de URLs iniciado`);
-    console.log("Datos recibidos en el backend un total de urls:", urls.length);
+    console.log(
+      "Datos recibidos en el backend, un total de URLs:",
+      urls.length
+    );
 
-    if (!Array.isArray(urls) || typeof token !== "string") {
+    // Validación de entrada
+    if (!Array.isArray(urls) || !urls.length || typeof token !== "string") {
       console.error(
-        "Error: Las URLs deben ser un array y el token una cadena."
+        "Error: Las URLs deben ser un array no vacío y el token una cadena."
       );
       return res.status(400).json({ error: "Datos inválidos" });
     }
 
     // Buscar coincidencias en la lista negra
-    const blacklistedUrls = await Blacklist.find({ url: { $in: urls } });
+    const blacklistedUrls = await Blacklist.find({ url: { $in: urls } }).select(
+      "url -_id"
+    );
     const blacklistedUrlsArray = blacklistedUrls.map((entry) => entry.url);
 
     // Procesar URLs para registrar o actualizar en el historial
-    const updatedUrls = [];
-    for (const url of blacklistedUrlsArray) {
-      const existingRecord = await UrlHistory.findOne({ token, url });
+    const bulkOperations = [];
+    blacklistedUrlsArray.forEach((url) => {
+      bulkOperations.push({
+        updateOne: {
+          filter: { token, url },
+          update: { $set: { active: true } },
+          upsert: true,
+        },
+      });
+    });
 
-      if (existingRecord) {
-        // Solo actualizamos y añadimos al array si active era false
-        if (!existingRecord.active) {
-          existingRecord.active = true;
-          await existingRecord.save();
-          updatedUrls.push(url);
-        }
-      } else {
-        // Si no existe el registro, crear uno nuevo
-        const newRecord = new UrlHistory({ token, url, active: true });
-        await newRecord.save();
-        updatedUrls.push(url);
-      }
+    if (bulkOperations.length > 0) {
+      await UrlHistory.bulkWrite(bulkOperations);
     }
 
-    // Responder con el nuevo array y el token
-    return res.json({
-      urls: updatedUrls,
-    });
+    console.log(`[${fecha.toLocaleString()}] Escaneo completado.`);
+    return res.json({ urls: blacklistedUrlsArray });
   } catch (error) {
     console.error("Error procesando las URLs:", error);
     return res.status(500).json({ error: "Error interno del servidor" });

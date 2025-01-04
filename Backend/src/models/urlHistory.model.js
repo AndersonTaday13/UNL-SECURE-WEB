@@ -24,7 +24,7 @@ const urlSchema = new mongoose.Schema(
 );
 
 // Índices para optimizar las consultas
-urlSchema.index({ token: 1, active: 1 }); // Consulta por token y estado
-urlSchema.index({ token: 1, url: 1 }, { unique: true }); // Evitar duplicados por token + url
+urlSchema.index({ token: 1, url: 1 }, { unique: true }); // Evitar duplicados por token y url
+urlSchema.index({ token: 1, active: 1 }); // Consulta por token y estado activo
 
-export default mongoose.model("Urls-historial", urlSchema);
+export default mongoose.model("UrlHistory", urlSchema);
