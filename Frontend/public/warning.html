@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advertencia de Seguridad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8d7da;
+        }
+
+        .warning-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .warning-icon {
+            color: #dc3545;
+            font-size: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .warning-title {
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+
+        .warning-text {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .back-button {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .continue-button {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warning-container">
+        <div class="warning-icon">⚠️</div>
+        <h1 class="warning-title">¡Advertencia de Seguridad!</h1>
+        <p class="warning-text">
+            Esta página ha sido identificada como potencialmente maliciosa.
+            Continuar podría poner en riesgo tu seguridad y tus datos personales.
+        </p>
+        <div class="button-container">
+            <button class="button back-button" id="backButton">Regresar a lugar seguro</button>
+            <button class="button continue-button" id="continueButton">Continuar bajo mi responsabilidad</button>
+        </div>
+    </div>
+    <script src="warning.js"></script>
+</body>
+
+</html>
