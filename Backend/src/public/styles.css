@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  line-height: 1.6;
 }
 
 .header {
@@ -27,12 +28,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .logo {
   width: 130px;
-  /* Tamaño más grande para el logo */
   height: auto;
 }
 
@@ -41,56 +41,114 @@ body {
   font-size: 18px;
   margin: 0;
   font-weight: bold;
-  text-align: center;
-  /* Centrado */
 }
 
 .career-name {
   color: #666;
   font-size: 16px;
   margin: 5px 0;
-  text-align: center;
-  /* Centrado */
 }
 
 .system-name {
   color: #003366;
   font-size: 24px;
-  margin: 0;
+  margin: 0 0 10px 0;
   font-weight: bold;
-  margin-bottom: 10px;
-  /* Separación con las otras frases */
 }
 
-.report-type {
-  color: #666;
-  font-size: 18px;
-  margin: 5px 0;
-  margin-bottom: 20px;
-}
-
-h1 {
-  text-align: center;
-}
 .centered-text {
   text-align: justify;
-  margin: 0 auto;
+  margin: 20px 0;
+  line-height: 1.6;
+}
 
+h2 {
+  color: #003366;
+  margin: 30px 0 15px 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  table-layout: fixed;
 }
 
 th,
 td {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  vertical-align: top;
 }
 
 th {
   background-color: #f2f2f2;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Estados de las URLs */
+.status-pendiente {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-maliciosa {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-benigna {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Estilos específicos para cada tabla */
+table:first-of-type th:first-child,
+table:first-of-type td:first-child {
+  width: 100%;
+}
+
+table:last-of-type th:first-child,
+table:last-of-type td:first-child {
+  width: 80%;
+}
+
+table:last-of-type th:last-child,
+table:last-of-type td:last-child {
+  width: 20%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+td {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* Estilos para el total */
+p strong {
+  color: #003366;
+}
+
+@media print {
+  body {
+    padding: 10px;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  td {
+    word-break: break-word;
+  }
 }

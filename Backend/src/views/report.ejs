@@ -18,61 +18,75 @@
         </div>
     </div>
 
-            <div class="header-center">
-                <h1 class="system-name">SECURE WEB UNL</h1>
+    <div class="header-center">
+        <h1 class="system-name">SECURE WEB UNL</h1>
+    </div>
 
+    <div class="centered-text">
+        <% if (maliciousUrls && maliciousUrls.length> 0) { %>
+            A continuación se presenta una tabla con los resultados del análisis de URLs maliciosas realizadas en el
+            sistema. En este análisis se recolectaron un total de <%= countMaliciousUrls %> URLs las cuales fueron
+                identificadas como maliciosas. La siguiente tabla detalla cada URL detectada como maliciosa.
+                <% } else { %>
+                    No se han detectado URLs maliciosas en el sistema.
+                    <% } %>
+    </div>
+
+    <% if (maliciousUrls && maliciousUrls.length> 0) { %>
+        <h2>URLs Maliciosas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% maliciousUrls.forEach(urlObj=> { %>
+                    <tr>
+                        <td title="<%= urlObj.url %>">
+                            <%= urlObj.url %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <% } %>
+
+            <div class="centered-text">
+                <% if (reportUrls && reportUrls.length> 0) { %>
+                    La siguiente tabla presenta una lista de URLs sospechosas que han sido reportadas por los usuarios a
+                    través del sistema.
+                    <% } else { %>
+                        No hay URLs reportadas en el sistema.
+                        <% } %>
             </div>
 
-    <div class="centered-text">
-        A continuación se presenta una tabla con los resultados del análisis de URLs maliciosas realizadas en el sistema. En este análisis se recolectaron un total de <%= countActiveUrls %> URLs en los sitios web analizados, de las cuales fueron identificadas como maliciosas aquellas que coinciden con las entradas en la lista negra obtenida de fuentes especializadas como OpenPhish y URLhaus. La siguiente tabla detalla cada URL detectada como maliciosa.
-    </div>
-
-
-    <h2>URLs Maliciosas</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>URL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% maliciousUrls.forEach(urlObj=> { %>
-                <tr>
-                    <td>
-                        <%= urlObj.url %>
-                    </td>
-                </tr>
-                <% }) %>
-        </tbody>
-    </table>
-    <div class="centered-text">
-        La siguiente tabla presenta una lista de URLs sospechosas que han sido reportadas por los usuarios a través del sistema.
-    </div>
-
-    <h2>URLs en Reporte</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>URL</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% reportUrls.forEach(urlObj=> { %>
-                <tr>
-                    <td>
-                        <%= urlObj.url %>
-                    </td>
-                    <td>
-                        <%= urlObj.status %>
-                    </td>
-                </tr>
-                <% }) %>
-        </tbody>
-    </table>
-    <p><strong>Total de URLs en reportadas:</strong>
-        <%= countReportUrls %>
-    </p>
+            <% if (reportUrls && reportUrls.length> 0) { %>
+                <h2>URLs en Reporte</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>URL</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% reportUrls.forEach(urlObj=> { %>
+                            <tr>
+                                <td title="<%= urlObj.url %>">
+                                    <%= urlObj.url %>
+                                </td>
+                                <td class="status-<%= urlObj.status.toLowerCase() %>">
+                                    <%= urlObj.status %>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <p><strong>Total de URLs reportadas:</strong>
+                    <%= countReportUrls %>
+                </p>
+                <% } %>
 </body>
 
 </html>

@@ -4,6 +4,7 @@ import puppeteer from "puppeteer";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
+import { count } from "console";
 
 export const downloadReport = async (req, res) => {
   try {
@@ -13,16 +14,12 @@ export const downloadReport = async (req, res) => {
       return res.status(400).json({ error: "Token es requerido" });
     }
 
-    const [countActiveUrls, maliciousUrls, reportUrls] = await Promise.all([
-      UrlHistorial.countDocuments({ token, active: true }),
-      UrlHistorial.find(
-        { token, active: true, isMalicious: true },
-        { url: 1, _id: 0 }
-      ),
+    const [maliciousUrls, reportUrls] = await Promise.all([
+      // Traer todas las URLs activas del historial
+      UrlHistorial.find({ token, active: true }, { url: 1, _id: 0 }),
+      // Traer todas las URLs con sus estados de los reportes
       UrlReport.find({ token, active: true }, { url: 1, status: 1, _id: 0 }),
     ]);
-
-    const countReportUrls = reportUrls.length;
 
     // Convertir CSS y logo a base64
     const __filename = fileURLToPath(import.meta.url);
@@ -39,10 +36,10 @@ export const downloadReport = async (req, res) => {
       res.render(
         "report",
         {
-          countActiveUrls,
+          countMaliciousUrls: maliciousUrls.length,
           maliciousUrls,
           reportUrls,
-          countReportUrls,
+          countReportUrls: reportUrls.length,
           cssBase64,
           logoBase64,
         },
