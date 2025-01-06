@@ -1,4 +1,4 @@
-// declarativeNetRequest.service.js
+// declarativeNetRequest.service.js: 
 
 const generateUniqueId = async (url) => {
   const encoder = new TextEncoder();

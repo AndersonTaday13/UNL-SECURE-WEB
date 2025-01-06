@@ -1,11 +1,11 @@
 import { DownloadIcon } from "lucide-react";
 import { urlService } from "../api/axios.config.js";
-import { notifications } from "../services/notifications.service";
+import { uiNotifications } from "../services/ui-notifications.service";
 
 export const DownloadReport = () => {
   const handleClick = async () => {
     try {
-      notifications.success(
+      uiNotifications.success(
         "Generando informe...",
         "Por favor, espera un momento."
       );
@@ -22,14 +22,14 @@ export const DownloadReport = () => {
       link.click();
       link.remove();
 
-      notifications.success(
+      uiNotifications.success(
         "Informe generado",
         "El informe se descargó exitosamente."
       );
     } catch (error) {
       console.error("Error generando el informe PDF:", error);
 
-      notifications.error(
+      uiNotifications.error(
         "Error al generar el informe",
         "Hubo un problema generando o descargando el informe."
       );

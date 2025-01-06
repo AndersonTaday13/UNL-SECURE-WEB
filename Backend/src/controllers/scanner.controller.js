@@ -25,24 +25,51 @@ export const scanMultipleUrls = async (req, res) => {
     );
     const blacklistedUrlsArray = blacklistedUrls.map((entry) => entry.url);
 
-    // Procesar URLs para registrar o actualizar en el historial
-    const bulkOperations = [];
-    blacklistedUrlsArray.forEach((url) => {
-      bulkOperations.push({
-        updateOne: {
-          filter: { token, url },
-          update: { $set: { active: true } },
-          upsert: true,
-        },
-      });
+    // Buscar URLs existentes en el historial
+    const existingHistory = await UrlHistory.find({
+      token,
+      url: { $in: blacklistedUrlsArray },
     });
 
+    const historyMap = new Map(
+      existingHistory.map((entry) => [entry.url, entry.active])
+    );
+
+    const bulkOperations = [];
+    const urlsToSendToFrontend = [];
+
+    blacklistedUrlsArray.forEach((url) => {
+      const isInHistory = historyMap.has(url);
+      const isActive = historyMap.get(url);
+
+      if (!isInHistory) {
+        // No está en el historial, insertar nueva entrada
+        bulkOperations.push({
+          insertOne: { document: { token, url, active: true } },
+        });
+        urlsToSendToFrontend.push(url);
+      } else if (isInHistory && !isActive) {
+        // Está en el historial pero no está activo, actualizar estado
+        bulkOperations.push({
+          updateOne: {
+            filter: { token, url },
+            update: { $set: { active: true } },
+          },
+        });
+        urlsToSendToFrontend.push(url);
+      }
+      // Si está en el historial y ya está activo, no se añade a la lista
+    });
+
+    // Ejecutar las operaciones en bloque si hay algo que procesar
     if (bulkOperations.length > 0) {
       await UrlHistory.bulkWrite(bulkOperations);
     }
 
     console.log(`[${fecha.toLocaleString()}] Escaneo completado.`);
-    return res.json({ urls: blacklistedUrlsArray });
+    console.log("URLs enviadas al frontend:", urlsToSendToFrontend);
+
+    return res.json({ urls: urlsToSendToFrontend });
   } catch (error) {
     console.error("Error procesando las URLs:", error);
     return res.status(500).json({ error: "Error interno del servidor" });

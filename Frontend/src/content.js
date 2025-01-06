@@ -1,4 +1,5 @@
-// content.js
+// content.js: 
+
 const STORAGE_KEYS = {
   TOKEN: "complement_token",
   STATUS: "complement_status",

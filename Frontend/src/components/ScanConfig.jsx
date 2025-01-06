@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { complementService } from "../api/axios.config";
-import { notifications } from "../services/notifications.service.js";
+import { uiNotifications } from "../services/ui-notifications.service.js";
 import { toast } from "sonner";
 
 export const ScanConfig = () => {
@@ -20,7 +20,7 @@ export const ScanConfig = () => {
       } catch (err) {
         setError("Error al cargar los intervalos");
         console.error("Error:", err);
-        notifications.error(
+        uiNotifications.error(
           "Error",
           "Hubo un problema al cargar los intervalos."
         );
@@ -38,14 +38,14 @@ export const ScanConfig = () => {
       setScanInterval(newInterval);
       setPendingInterval(null);
       setError(null);
-      notifications.success(
+      uiNotifications.success(
         "Éxito",
         "El intervalo se ha actualizado correctamente."
       );
     } catch (err) {
       setError("Error al actualizar el intervalo");
       console.error("Error:", err);
-      notifications.error(
+      uiNotifications.error(
         "Error",
         "Ocurrió un problema al actualizar el intervalo."
       );

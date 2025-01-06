@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { urlService } from "../api/axios.config";
-import { notifications } from "../services/notifications.service.js";
+import { uiNotifications } from "../services/ui-notifications.service.js";
 
 export const ReportURL = () => {
   const [url, setUrl] = useState("");
@@ -12,7 +12,7 @@ export const ReportURL = () => {
     setIsLoading(true);
     try {
       const response = await urlService.reportUrl(url);
-      notifications.success(
+      uiNotifications.success(
         "URL reportada exitosamente",
         "La URL fue reportada correctamente."
       );
@@ -23,12 +23,12 @@ export const ReportURL = () => {
       console.error("Error al reportar URL:", error);
 
       if (error?.error === "La URL ya ha sido reportada") {
-        notifications.error(
+        uiNotifications.error(
           "URL ya reportada",
           "La URL que estás intentando reportar ya ha sido registrada."
         );
       } else {
-        notifications.error(
+        uiNotifications.error(
           "Error al reportar URL",
           "Ocurrió un problema al intentar reportar la URL."
         );

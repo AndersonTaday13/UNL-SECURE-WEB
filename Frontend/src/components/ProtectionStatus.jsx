@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { complementService } from "../api/axios.config";
 import { storageService } from "../services/storage.service.js";
-import { notifications } from "../services/notifications.service.js";
+import { uiNotifications } from "../services/ui-notifications.service.js";
 
 export const ProtectionStatus = () => {
   const [isActive, setIsActive] = useState(false);
@@ -15,7 +15,7 @@ export const ProtectionStatus = () => {
       setIsActive(storedStatus);
     } catch (error) {
       console.error("Error al cargar el estado inicial:", error);
-      notifications.error(
+      uiNotifications.error(
         "Error al cargar el estado",
         "No se pudo obtener el estado inicial"
       );
@@ -39,7 +39,7 @@ export const ProtectionStatus = () => {
 
       const promise = complementService.updateStatus();
 
-      await notifications.loading(promise, {
+      await uiNotifications.loading(promise, {
         loading: "Actualizando estado...",
         success: "Estado actualizado correctamente",
         error: "Error al actualizar el estado",
@@ -56,7 +56,7 @@ export const ProtectionStatus = () => {
       const currentStatus = await storageService.getStatus();
       setIsActive(currentStatus);
 
-      notifications.error(
+      uiNotifications.error(
         "Error al actualizar estado",
         "Ocurrió un error al cambiar el estado."
       );
