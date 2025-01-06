@@ -9,18 +9,16 @@ export const DownloadReport = () => {
         "Generando informe...",
         "Por favor, espera un momento."
       );
-      const response = await urlService.generateReport({
-        responseType: "blob",
-      });
-      const blob = new Blob([response.data], { type: "application/pdf" });
+
+      const blob = await urlService.generateReport();
       const url = window.URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = "report.pdf";
-      document.body.appendChild(link);
+      link.download = `report-${Date.now()}.pdf`;
       link.click();
-      link.remove();
+
+      window.URL.revokeObjectURL(url);
 
       uiNotifications.success(
         "Informe generado",

@@ -70,9 +70,7 @@ export const urlService = {
   generateReport: async () => {
     try {
       const token = await storageService.getToken();
-      if (!token) {
-        throw new Error("Token no encontrado. Por favor, inicia sesión.");
-      }
+      if (!token) throw new Error("Token no encontrado");
 
       const response = await axiosInstance.post(
         "/download-report",
@@ -80,13 +78,9 @@ export const urlService = {
         { responseType: "blob" }
       );
 
-      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-      const pdfUrl = window.URL.createObjectURL(pdfBlob);
-
-      return pdfUrl;
+      return response.data;
     } catch (error) {
-      console.error("Error generando el reporte PDF:", error);
-      throw new Error("No se pudo generar el reporte.");
+      throw error;
     }
   },
 };
