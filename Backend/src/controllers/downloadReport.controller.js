@@ -4,9 +4,9 @@ import puppeteer from "puppeteer";
 import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
-import { count } from "console";
 
 export const downloadReport = async (req, res) => {
+  let browser;
   try {
     const { token } = req.body;
 
@@ -51,7 +51,7 @@ export const downloadReport = async (req, res) => {
     });
 
     // Configurar Puppeteer
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: "new",
       args: [
         "--no-sandbox",
@@ -96,7 +96,6 @@ export const downloadReport = async (req, res) => {
     // Enviar el PDF
     return res.end(pdfBuffer);
   } catch (error) {
-    console.error("Error generando el reporte PDF:", error);
     return res.status(500).json({ error: "Error generando el PDF" });
   }
 };

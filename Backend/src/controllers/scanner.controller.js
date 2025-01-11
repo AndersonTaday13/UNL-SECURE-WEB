@@ -4,18 +4,9 @@ import UrlHistory from "../models/urlHistory.model.js";
 export const scanMultipleUrls = async (req, res) => {
   try {
     const { urls, token } = req.body;
-    const fecha = new Date();
-    console.log(`[${fecha.toLocaleString()}] Escaneo de URLs iniciado`);
-    console.log(
-      "Datos recibidos en el backend, un total de URLs:",
-      urls.length
-    );
 
     // Validación de entrada
     if (!Array.isArray(urls) || !urls.length || typeof token !== "string") {
-      console.error(
-        "Error: Las URLs deben ser un array no vacío y el token una cadena."
-      );
       return res.status(400).json({ error: "Datos inválidos" });
     }
 
@@ -66,12 +57,10 @@ export const scanMultipleUrls = async (req, res) => {
       await UrlHistory.bulkWrite(bulkOperations);
     }
 
-    console.log(`[${fecha.toLocaleString()}] Escaneo completado.`);
-    console.log("URLs enviadas al frontend:", urlsToSendToFrontend);
+    //console.log("URLs enviadas al frontend:", urlsToSendToFrontend);
 
     return res.json({ urls: urlsToSendToFrontend });
   } catch (error) {
-    console.error("Error procesando las URLs:", error);
     return res.status(500).json({ error: "Error interno del servidor" });
   }
 };
