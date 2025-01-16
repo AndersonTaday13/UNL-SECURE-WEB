@@ -9,7 +9,7 @@ services:
             - "8080:3030"
         links:
             - mongodb
-        volumes:
+        volumes: 
             - .:/usr/src/app
         env_file:
             - .env
@@ -18,3 +18,7 @@ services:
         image: mongo
         ports:
             - "27017:27017"
+        volumes:
+            - ./backup:/backup
+            - ./data:/data/db
+        command: bash -c "mongod --bind_ip_all & sleep 5 && ./backup/init.sh"

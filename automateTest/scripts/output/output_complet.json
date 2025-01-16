@@ -1,0 +1,4002 @@
+[
+  {
+    "url": "http://hutergroup.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://centerlearning.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://m-app--kucion-cdn.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://luulla.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ttgsm.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://web.telegramxp.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://growingf8th.org/t2dolalrwe/iYZ18JzLyIFZ5F0zWaHpxzTKzVF/ZXJpbkBjYXJlbmJhdWVycy5jb20=",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://uphholdrlloggiiii.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nutracorp.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://chuo-bus.co.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://paper.id",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gan.fr",
+    "expected": "benign"
+  },
+  {
+    "url": "http://emagineconcept.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackltn.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bestviewtravel.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://xioysnmd.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pcryrkayhn.duckdns.org/en",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://seraphicsecurity.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://airlinesassistant.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sunsetdetailingoc.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://datatronic.fi",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracknlu.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://musixe.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://gdhshcdxczv.weeblysite.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://gauimilogozo.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://open-musics.ir",
+    "expected": "benign"
+  },
+  {
+    "url": "http://snowverb.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tjyrcl.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://eql.media",
+    "expected": "benign"
+  },
+  {
+    "url": "http://energynews.pro",
+    "expected": "benign"
+  },
+  {
+    "url": "http://raraplanetliga.top",
+    "expected": "benign"
+  },
+  {
+    "url": "https://obaleyes-spectacular-site.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hpkaas.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://esotericarchives.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://appservicesma11msw1.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://91000c.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://att78yuhe3.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackeqi.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://boardstudy.in",
+    "expected": "benign"
+  },
+  {
+    "url": "http://suleslot.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mail.914326-coinbase.com/review...................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://drynaina.cyou",
+    "expected": "benign"
+  },
+  {
+    "url": "http://cyclause.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://trlegram.email/k/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://usps.com-trackhln.top/us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://autofinder.cn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://qr.de/jfyrcz",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://xxx-premium.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ezdrivema.com-rlc.top/ma",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://forbiddenplanet.co.uk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://happysizes.gr",
+    "expected": "benign"
+  },
+  {
+    "url": "http://coofmale.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackmda.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bitter-caring-bead.glitch.me/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://akytec.global",
+    "expected": "benign"
+  },
+  {
+    "url": "http://swishmail.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeiahxswlwtj2jgzkbr6fhm7qxm3ih5sjz7e6kl57kxff6km7joymw4.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://help---content-ledgri.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://mietamiskextion.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://computersharevoucherservices.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://arms-bg.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://onm.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://cetin.cz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://seributotox.org",
+    "expected": "benign"
+  },
+  {
+    "url": "https://signordero.top",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://jstnyw.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://gjnpcysv.elementor.cloud",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://kanliao2.one",
+    "expected": "benign"
+  },
+  {
+    "url": "http://wmagazine.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://biitpanda.firebaseapp.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://netflix-3y9.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://arsuzescort.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pub-e7f9ed00eec14af2b1dfeced73e9de2e.r2.dev/Payment.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pages.tempisite.com/Facebook-hepl-profile-php",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://rxxt.asia/applesca21xcza?m=000&amp;t=000&amp;ip=0.0.0.0&amp;language=ja&amp;d=000",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://rebrand.ly/v1s8sk0",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aoijapan.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mail.8724319-coinbase.com/review.......................................................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://acenet-inc.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://exodusweb-cdn.teachable.com/p/home",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://11ev88.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gybetpay.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://blss24att.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://metamskchromextensun.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://jqjqripb.xyz/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://suividucolis-relay.com/pages/index.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gemgaming.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usa-basecoinpro-log.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bitvavoeth.vip/index/index/lang/fr-fr",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://retrocrush.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://solutionsbytext.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://city.takasaki.gunma.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "https://phraseseeds.freewebhostmost.com/Metamask/wallet.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://appelvocalau070707.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hezuoquanmianjiaoyu.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mail.8724319-coinbase.com/review...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://actility.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://grouposshop.top",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-tracking-helprzo.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://telewer-tpza.icu",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://uniki.ac.id",
+    "expected": "benign"
+  },
+  {
+    "url": "http://medicine.lv",
+    "expected": "benign"
+  },
+  {
+    "url": "https://trezorsuiteapp--auth.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ticket5874982123.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackfdw.top/i/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pacer.org",
+    "expected": "benign"
+  },
+  {
+    "url": "https://uryehbakn.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://viel-unterwegs.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://help--ledgar-logon.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://update-ee-world-internet.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ejf.de",
+    "expected": "benign"
+  },
+  {
+    "url": "https://kirito0611.github.io/bansd",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://132.145.102.243:81",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackiqj.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ahvalnews.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://care-ltd.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://slegelogins.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-tracktxc.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://gadjma.com/Aplusfcu/ufnmgcloj/kees-access/ss.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://help-us-treiazorer.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ptxsjqghmfvdo.bond",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://fooddemocracynow.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://treatwell.at",
+    "expected": "benign"
+  },
+  {
+    "url": "http://godreamcast.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://help-wletconect.gitbook.io/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://43.153.97.136/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nsgroups.it",
+    "expected": "benign"
+  },
+  {
+    "url": "https://ec-icloud-lost.info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://fb88sv.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://myaujp-co.shop/au.jp",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://hgvzrpxnkmbtw.work/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pmoagmk.uz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pot-sac800m74hu652z6p95.wccds.click/en",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://croisiere-europe.eu",
+    "expected": "benign"
+  },
+  {
+    "url": "https://multiclouddappconnect.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://signin0097706.weebly.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://utravs.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://isavscan.college",
+    "expected": "benign"
+  },
+  {
+    "url": "http://amazon.co.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://brokenarrowok.gov",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-mendm.xin/i",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ghostsapp.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helptvo.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://heussofroitoprei-1187.vercel.app/ratixx.html/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://blockfe-lgin.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://ysh78dxk.net",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cmpxchg8b.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tallinksilja.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://algerieinfo.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aguiaoficial.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://autokelly.sk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://a0988288.xsph.ru/yoyo334/yoyo322/adobe-home",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://stoledo.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpboi.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hqhentai.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://kicionilogein.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://ajrluk.icu/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tropco.co.uk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://lojasdufins.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://e551000.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://www.is.gd/FeGNNP",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://authormeth.ru",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cagop.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://vtio.cn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-tracksqh.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://noc.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pancake-swaplive-01.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://cpbjzrtnxwlkf.bond/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://informed.deliveryqam.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://usps.com-trackzfp.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bt-108030.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://154.204.129.142/next_one.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://raja168c.one",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aaathats3as.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aoki-tsuyoshi.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://101greatgoals.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://imperialbag.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bigtit.xyz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bqwnzzzu.click",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://zyvjc.xyz/0je9s/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://xo268v1.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://vnv.saleeimm.click/login/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tubidy.cool",
+    "expected": "benign"
+  },
+  {
+    "url": "https://tagegram.wsxckq.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://stibee.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://spotifyc.me/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://artfight.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mkfull.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://itnet.com.pl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://wvia.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://t3voicenet.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://coinnbaaseprolgoien.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bbsi.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://startbizreg.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tqztryll.email/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://mixspinpump.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://rendaliuyu.serpgold.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://newschannel10.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://asialive88bet94.store",
+    "expected": "benign"
+  },
+  {
+    "url": "http://femanc.best",
+    "expected": "benign"
+  },
+  {
+    "url": "http://metamskchromextensun.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sucrusabaml0mb14trfiere.firebaseapp.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://mail.914326-coinbase.com/review.............................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sanatbazar.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://att5h6.wixsite.com/attt5",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://crocieristi.it",
+    "expected": "benign"
+  },
+  {
+    "url": "https://eagle.azxcvbnsd.ip-ddns.com/gp/browse.html?node=14498690011&ref_=amzn_nav_ftr_swa",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackivq.top/us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://dev-85214796301259644152.pantheonsite.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://thunderstruck-slots.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mail-team-105169.square.site/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://gewtx.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://citiustech.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://glu.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://cejamcloud.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mixcat.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://service-paquage-temps.codeanyapp.com/dhI/index.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://roninchat.pages.dev/import-account",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://t-s1-msedge.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mailaccountvalidationmicrostmail.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://metamsskchromeextension.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://madonn-lpg-mypertamina.vxwbxsite.my",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cricketboard.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://aslqjmrxkf.xyz/k",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://srware.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://relais-retour.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://vol.az",
+    "expected": "benign"
+  },
+  {
+    "url": "http://szukits.hu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aldoautopartes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://serna1.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nontonaja.shop",
+    "expected": "benign"
+  },
+  {
+    "url": "https://dev-ousssss85.pantheonsite.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://telegra.ph/BT-Business-and-Public-Sector-12-20",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://autowest.com.ua",
+    "expected": "benign"
+  },
+  {
+    "url": "http://shaw-105865.weeblysite.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aawekkks-jilboobz.medistreint.asia",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackaet.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://www.metamask.ro/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cancelar-suscripcion.glitch.me",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-nsdlo.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-tracking-helpoom.cc/info/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bitmastsllogn.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hondaweb.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bbpan.advisoraml.net/panda/a/significance/gelt/flowcharter/productive/fluctuating/nutty/granted/colonization/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://makeroi.tech",
+    "expected": "benign"
+  },
+  {
+    "url": "https://stcamconmymmnlty.com/typo/fyt/sik",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://m--trezor--en--docs.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://saudenocotidiano.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://icloud.apple-urish.gofjp.cn/account_int",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nalumosovocationalinstitute.com/wp-admin/f/AMENCN-1/en.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackrlf.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://autoforum.cz",
+    "expected": "benign"
+  },
+  {
+    "url": "https://help-s-ledgrelive--s.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://svrn.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://pub-b8ce50a7d75548bdb6bbb485e6f8f983.r2.dev/luslSA/index.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://shiptrace-help.top/i",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://mpotop88online.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://7789betpro.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nafruzwik.ink/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://centurysupport90.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://revistaft.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://zetadeo.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://my-sso--coinbase-com-i---auth.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://loveroza.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://suportinbox-meta.github.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://limit-world-muddy-4cc7.c-1-o-u-d-o-s-torage.workers.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bluelakefolks.wixsite.com/my-site-1",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://ihpost.39458154.xyz/iimcebwm/uzI22n/7",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://behaviouralinsights.co.uk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://anujspotify.freewebhostmost.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://lojaspatricinha.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://todesanzeigenportal.ch",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tackzcep.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://uspspoldr.top/track",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://kad5.github.io/Facebook-s-sign-up-form--HTML--CSS--no-JS-",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://aiphaget.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://smartworks.org.uk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://lemmygroup.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://makeshop.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://telekuq-jwds.icu",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://zh-imtoken.my/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://kpxqlvrwnz.ink",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sbcglobal-104958.weeblysite.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tvsemerald.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://odcuf.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://threads4thought.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://hfndfntdjp.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://jentif.com/strato/login",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://trserver.ca",
+    "expected": "benign"
+  },
+  {
+    "url": "http://euclidpower.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://sso----uphold--com--cdn-web-autth.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bizidex.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://195.123.245.190/Finance/tang",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://mygoalthemes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://zazzle.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://epspeir.gr",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpszq.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://kaadas.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://carram-pool.github.io/connect",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://kheloroyal.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://rssdog.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dabaraw.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://1qgy7uj.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://daojiawy.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-jknhr.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://admiralx-pzr.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://loboclick.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://99.81.174.244",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ice-gay.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sgd2.x-princebrew.web.id",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://gemniolaogi.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://mail.8724319-coinbase.com/review...........................................................................................................................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://recovercaseidfeedbackhelpcaseid.dzjm9va1dqytv.amplifyapp.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ga-eagles.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "https://ipko.pl-bp.com/index.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://57365ee.cc",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://kjmz8.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://brooklyn9446.github.io/Netflix-Clone/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://reservasnacionaleslatam.up.railway.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://maqan.kz",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackgtr.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://clicksports.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fiu.edu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://123hjemmeside.no",
+    "expected": "benign"
+  },
+  {
+    "url": "https://help-fy5p.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://shmoti.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://henandatong.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://unaiiii8.github.io/Netflix_Login_Copy",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://rrkgnriwhnrihnorwhosngwhk.azurewebsites.net",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://quoicesogratro-1534.vercel.app/ratixx.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://supportmondialrelay.help/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://jesefe.com/jpshop/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apple15090739.brizy.site",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://comicvn6.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://didspack.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://worried-hospitable-slayer.glitch.me/netsllc.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://heute-lernen.de",
+    "expected": "benign"
+  },
+  {
+    "url": "https://informed.deliveryrch.top/l",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://walletdao.gitbook.io/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://manouvellelivraison.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://sso--feq--coinbasepro--cdn---h--auth.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://t.co/smy0SPlihN",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://chewzie.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://upressonline.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://staltz.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://metamaasklogiin.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://trezor-suite-up.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://delivery.usps-turhgfs.top/i",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://informed.deliveryqwd.top/us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://brucewaynex.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://atmmarketplace.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://att-108595.square.site",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://fwfe.yoyojunjun.xyz/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://townhallmail.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://kemprok.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "https://securityawareness.cc/landing/form/84b397dd-34bc-4026-bed9-8b44d9950d82",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://memoat-tactivespot-attmail-webmial00029.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://up5uu7x.life",
+    "expected": "benign"
+  },
+  {
+    "url": "http://cinemapettai.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://edilex.fi",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tracktherecovery.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://opti-24.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://colliers.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dogboy.io",
+    "expected": "benign"
+  },
+  {
+    "url": "https://metatmasklogine.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nszephyranthes.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://16betoss.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://request11.github.io/meta-verify",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://webonline3.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sounda.ai",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aol-105072-103462.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://maximarkets.mobi",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pdf2docx.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://catcasinoplay.homes",
+    "expected": "benign"
+  },
+  {
+    "url": "http://idos.cz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://thoughtcatalog.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeiffruuknegoif65yncgcwkyvbj53brt7vm7ggggb5cy5lzwv7sst4.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackiwg.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://rdrclk.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://president-kbr.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hello-world-divine-grass-28fb.isaih243.workers.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://noahapps.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bgitopazdowntown.ddireal.vn/wp-content/themes/twentytwenty/classes/wells",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://33357.github.io/uniswap-v2/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://services-app-ledgreee.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://submit-appeal-29839829.vercel.app/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://elitecouro.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "https://startt-ledgr-auth.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bit.ly/4gY9VBe",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bafybeibd7nq67omcz6vfaoraufiv47dl3fwadzpacj4pwk6sgirxs4qhza.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://streamlinepublishing.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://brumaveinasu-7579.vercel.app/tcl.tltyv",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hitachikaihin.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "https://anandkalambe.github.io/html.project1",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://peoplebyname.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tangorin.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://v77blackgame.club",
+    "expected": "benign"
+  },
+  {
+    "url": "http://lcloud-fmi.pro/fmicode/codeeng.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://com-tracking-cxp.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nixcraft.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://xuytyt456y23.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://moviemeter.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://kapanaliyor.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.packagesn.icu/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pjspotify.freewebhostmost.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://deuna.app",
+    "expected": "benign"
+  },
+  {
+    "url": "http://telerium.biz",
+    "expected": "benign"
+  },
+  {
+    "url": "https://online-adg.github.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackcxi.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pancakefinances-swap.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://defeokounabgeouja.freewebhostmost.com/dhhh/tracking/fV5EjH/msg.php?id=60123974",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nbqxsolar.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://juul-dev.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-tracking-helpsof.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://shweiyishizheng.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bomomvpfo.club",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://soundstore.ie",
+    "expected": "benign"
+  },
+  {
+    "url": "http://projects.webwatt.com/wp-includes/css/dist/nux/semitrue/semitrue",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sohosted19.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://baury33.serv00.net/swis/suissepass/CHFINAL/CHFINALE",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://loanappsinkenya.co.ke",
+    "expected": "benign"
+  },
+  {
+    "url": "http://happylifeharbor.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aa1.cn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ofppt-langues.ma",
+    "expected": "benign"
+  },
+  {
+    "url": "http://libertytax.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ordino.ro",
+    "expected": "benign"
+  },
+  {
+    "url": "https://geminiloginorofficialsigin51.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://babybytes.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://xaoyo.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://trackdwy.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://yourtahoeplace.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tvunetworks.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://unri.lv",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pressaru.de",
+    "expected": "benign"
+  },
+  {
+    "url": "https://us-en-exodusus-cdn.teachable.com/p/home",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://getdns.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://web3-projects-beta.vercel.app/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://marker-interfax.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://casino1xbet.biz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://freshtunes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://filmix.cloud",
+    "expected": "benign"
+  },
+  {
+    "url": "http://45.90.58.74/Finance/tang",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://steeamcommnity.com/profile/48923852102",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://relay-service.info/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://autoiothiatowers.web.app/?err=argri6kz1hpe2w4dw8njb91uncb3sxdbfcpyb9phqpzz388ww27a1ux7kvbberhnae0hb3zyzpxvidzm089yv1x49dcxhly40bxwsvfcfsjgrf2qi09syklbu3s0x5lhdrfvl1sndqs2uk02iodn7b9iupyabizgoouj4qfhgelkkg9rgkq226esf9sbxk5ftiubjuh7ekgtxgua081wsthlzkjmpuq5ojnjvcg1&dispatc...+311+...91uncb3sxdbfcpyb9phqpzz388ww27=&err=argri6kz1hpe2w4dw8njb91uncb3sxdbfcpyb9phqpzz388ww27a1ux7",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://basketuniverso.it",
+    "expected": "benign"
+  },
+  {
+    "url": "https://techsup.co/dist/en/personel",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://halalmuslim.online",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mountaininfra.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://m-rjbm.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://blogwolf.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://meutamussk-loeggin.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hampton.k12.va.us",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-trackzyh.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://usps.com-tracking-helpsxy.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://itechtree.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nris.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fclmedia.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ncrsecurepay.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://homemail-108757.weeblysite.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ad-tmt1.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gvt1-cn.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://btemail-bfv5.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://www-support-com.info/fmicode/code.php/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://zulubet.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://asvcw.blogspot.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://lankapropertyweb.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://novaalab.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hoteleskinky.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dev-3856957lll.pantheonsite.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://lhlicagents.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://exologin.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://touslesprix.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://docs.gravatar.com/changelog",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://qqqbvvvisys.bond/QpgEBuiFHZHcW",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://rahaporn.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://steamcommuntity.com/activation-receive",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://estaeasfeta-post.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://docs.google.com/drawings/d/1-xQmymGWw9n7Gn_NqXwD0i3OBXb9CJnwGjdqeTEw_Xc/edit",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://siapanel.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sath1001.github.io/Netflix/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://yapiapp.io",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aucklandnz.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://metaauth.click/marketplace-chatbox",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://potabilices.ru.com/amex",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hd9.mobi",
+    "expected": "benign"
+  },
+  {
+    "url": "http://alhusaini.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hfglpwrk.green/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://shicaixinxikeji.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mob.acount-metai.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bimkilo28.blogspot.co.ke",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://eldoradocasino-tdt.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bxz3kkhhfcyyfzpx4ulzhfzjspe8yj.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://m.ccsurj.org/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apotin.online",
+    "expected": "benign"
+  },
+  {
+    "url": "http://amnet.net.au",
+    "expected": "benign"
+  },
+  {
+    "url": "https://uspsttswq.top/track",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://anpsa.org.au",
+    "expected": "benign"
+  },
+  {
+    "url": "https://allegrolokalnie.pl-oferta34534.cfd/oferta/VwI8GGeSoBss5fe-AGzqAtCwyiAKQxu-216zZhkfMnpPztJ/18",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://offer-sale.shop",
+    "expected": "benign"
+  },
+  {
+    "url": "http://portfolio-pfotudk.format.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://slushy-portly-computergames-rdeemrwrd.replit.app/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sge8105.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://skladchikcg.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "https://df.game.naver.com.js.abbadoned.us.kg/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://mygreenlovers.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hendrickson-intl.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://kokul-ponnaiyan1110.github.io/netfilx",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ks-inform.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nintendo.ch",
+    "expected": "benign"
+  },
+  {
+    "url": "http://chinacarbonfiber.buzz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aplayvlog.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://uzparno.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ringier.sk",
+    "expected": "benign"
+  },
+  {
+    "url": "https://www.business-support-login.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://newprogrammatic.click",
+    "expected": "benign"
+  },
+  {
+    "url": "http://byronbay-boutique.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://metmmskluginee.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hdgdddhdd.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://p1-intl.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bottegaliberaterra.it",
+    "expected": "benign"
+  },
+  {
+    "url": "http://thomasjackowski.com/t2dolalrwe/XfQh2XiVWe0xKqv5oeIgm0CiBPz/amNhcm1vbmFAcHJjbWxsYy5jb20=",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://securedexpad.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://vjcrxqnbktwzp.xin",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://dispatchhealth.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://facebook-gamma-cyan.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://topadvert.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeifoidevgjgq7ihnvfhz4edp6otbjg57fakzohb7ua4ljbws67xzv4.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nationaldeafcenter.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://psicologaantoniabrandao.com.br/sg/NOVASCOT/1f84c",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://klm.com.pe",
+    "expected": "benign"
+  },
+  {
+    "url": "http://syzhangxin.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://omnipodapi.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mlntrend.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bt-107527.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://whtasapp-dh.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://heijnen-planten.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ipmetradar.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpszn.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://frank-casino.uno",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeiarkqndoh3z7ppxniypags3prf3ar4bllv366opeul3yjnc5m5phy.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://38.60.162.51/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gamemodding.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ericsson.fi",
+    "expected": "benign"
+  },
+  {
+    "url": "http://rox-casino-aromi45.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://infinitecraftrecipes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://sisterjane.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mageewp.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://teleramn.xin/TW",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://usps.com-trackavb.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://icolorlines.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sikkerhet-vipps.sms-spoof.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ardis.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "https://uspsfgtswu.top/track",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackbfc.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://slovoidilo.ua",
+    "expected": "benign"
+  },
+  {
+    "url": "https://bafybeih4dttbviqrwy5a6vl5ft6k64uwriywcj6kdgbkvaq3h62sxmupm4.ipfs.dweb.link/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://casinosecret.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpaef.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://www.telegrammp.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://psycheauld-mccaiamp-gheuntly.yolasite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://recordsale.de",
+    "expected": "benign"
+  },
+  {
+    "url": "https://docs.google.com/drawings/d/1AFs2DC_jREu8ydn_MNxEAoWBWPj-qagju0nuazfL_AM/edit",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tabanmusic.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://isaimini1.vip",
+    "expected": "benign"
+  },
+  {
+    "url": "http://82service.in",
+    "expected": "benign"
+  },
+  {
+    "url": "http://turboindian.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ramenbetcasino-online.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "https://wwwteiegrmte.xyz/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://discord-d7f1pmwte-owenlikecoding.vercel.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackmlk.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://amgeneral.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://oasisgr.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ogqcorp.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackawr.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bayareacouncil.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://rvtv.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fk-tosikou.or.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://alteryx.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://redsportonline.com.ar",
+    "expected": "benign"
+  },
+  {
+    "url": "https://338975.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://redex-extra.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://kuriaad.hu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bt-104357.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ccoiinbcasseprxmologun.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://stefano-brandimarte.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ktzholding.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://vora.lol",
+    "expected": "benign"
+  },
+  {
+    "url": "http://rustoncom.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bpqxqtuig.club",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://deqawurto.wang",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://be7pokerdom.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ezdrivema.com-rla.xin/ma",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://telegramuzbek.asia/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://unext-info.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://riving6-heliotr76pe-claim0e.netlify.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://take5slots.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ultimateadvise.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://meta.centerhelppro.eu",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://55100007.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://greatamericanlitigationservices.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpoom.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://metamask-log.iwopop.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gacraft.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackhky.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://boapremium-001-site1.ptempurl.com/mortgage/home-mortgage/index.htm",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://f551001.cc",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nepsia.sbs",
+    "expected": "benign"
+  },
+  {
+    "url": "http://infopaginas.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://review-now.neocities.org",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ritualesrh.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackqxx.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cdrinfo.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sso-uphold-com-cdn--x--auth.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://teleram.cc/TW/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://iboa3x3.com/xc/roundcube/?email=abuse@optusnet.com.au",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://packages-uszj.icu/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://allegrolokalnie.pl-oferta898928699.buzz/?id=1EeAiA5bg5oDENEhFB1K2HOmD47F8A",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://cevoureigremmei-4382.vercel.app/plz.ayndw",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://ukrposhia-ua.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://medicare.com.vn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://casino-classic.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://apphole-signinizwolyt3.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://messagerieorange8.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://snipr.online",
+    "expected": "benign"
+  },
+  {
+    "url": "https://coursesignapp.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://soltis.be/pack-id-2af543a/payment.php/xl2024.php/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hopelingerie.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tfdp.com.tw",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tekscan.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://jaksta.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dft-efm-electricvehicles-dev.web.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://suiee-trezoor--able.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://amazon-express.lat/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://adventistgiving.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://contus.sbs",
+    "expected": "benign"
+  },
+  {
+    "url": "http://111778d.wcomhost.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://trackrtb.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://deprtpagobancol.web.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://yeicotjj.github.io/auditoria/login.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://newvefierdairmilescanda.weebly.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://wsfuopewfi.xin/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sspinc.io",
+    "expected": "benign"
+  },
+  {
+    "url": "http://auth--tt--sso-trezor---web.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://att-104689.square.site",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://localharvest.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bikomebb.blogspot.mx",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackpfu.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://metamasxklogni.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cdhvdsivd5.blogspot.lu",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://agcsolifia.duckdns.org/de",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://qrco.de/bffUyD",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://uspsco.click/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://shiguangqiwu.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mezcalito.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://crrstv.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://freevpnssoftware.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://estafetatc.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-tracktdr.top/i/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://uma.edu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafkreibiaa3bbdpeqx7eiorpht4hhedgqsltb4f4mhe2nu6jg6cwlc2bhi.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apps-metamosk.gitbook.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bafybeibnwfaxzs6nuiwymg3tcldwpdouhzg5eprhduqvd2kq2tcsp4cepe.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://remotelivedappsfix.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://m99.asia",
+    "expected": "benign"
+  },
+  {
+    "url": "http://awapps.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-tracknmi.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gpool.cloud",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tibiabr.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://diplomasolution.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://vulkan24-platinum.info",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackxzo.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://videotron819.weebly.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1UDO_jQoqEJ-_B4MOxXnK336DghJKggCGkoXfkhb1O78/mobilepresent?slide=id.g31f97e7e752_0_10",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://tp115765uxs.weeblysite.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://5510000.vip",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://camera4higher.com/nmcba/bt/index.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cromosomax.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://fjqpbyhwdlkrm.xin",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ggqpfjqc.wiki",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sdlanbang.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://boardtechmaxibuiltfare.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://virtualbrandefy.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bit.ly/4h3WsHV",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://imagizer.imageshack.com/img924/1897/uq2ZFg.jp",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://easyweeknightrecipes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://zorem.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://360yield-basic.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://sbcloud.us",
+    "expected": "benign"
+  },
+  {
+    "url": "http://specialword.xyz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gleamer.ai",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nic.cba",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mexestafeti.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://vless-a8m.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackafw.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://avero.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://globalnet.id",
+    "expected": "benign"
+  },
+  {
+    "url": "http://teixo.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-trackadels.top/I",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bvsqkjwpin.black/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://flowermangas.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://informed.deliveryqwm.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://case-help-review-request-appeal.netlify.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://welcom-bridge-trezr.github.io/en-us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://currentlyatt404.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackpsj.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://lululemon.co.nz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://yh.net.tr",
+    "expected": "benign"
+  },
+  {
+    "url": "https://8dl6s52ae3.cyou/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aboitizpower.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://green-print.ro",
+    "expected": "benign"
+  },
+  {
+    "url": "https://videotroncens.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://metar-taf.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://growingf8th.org/t2dolalrwe/P3Z7xRfk4mk5d5rNNuIkcE76yhp/anBlcmV6QGJlbGxjb250cmFjdG9ycy5jb20=",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tram.cat",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nporadio1.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://prefectiomonys.xyz",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cablevision.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://leadong.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tancaoshengwu.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://netflixgpt-dfc1e.firebaseapp.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sentinelcolorado.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://lovestu.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aeat.es",
+    "expected": "benign"
+  },
+  {
+    "url": "https://tatrsm.xin/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bent-1601.vercel.app/global/rpticket12.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hookupsranked.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://nevadastrip.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://saboreahuelva.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpslca.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://www.666.mobile-event.cbkgardens.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://thebikesmiths.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-trackdax.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nhmonthly.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://kucoinloginin.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://boxedwaterisbetter.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-trackyvg.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://moodysanalytics.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://thealpenanews.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://4pcdn.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mipagoamigo.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://indianurduporn.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackywh.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://informed.deliveryqhw.top/l",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://cdn.trytraffics.com/rdr/YWE9MzUzNjA3NjUxJnNlaT0yOTYxOTI1MSZ0az1yMEhRTUVPWHFhWVBwY1RvRlR4eSZ0PTUmYz05MGFzODc2ZmQ4OWFzNWZnOGEwOXM=",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://461217.cc",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://auto.dajian.us.kg",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://fanatics.es",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackovo.top/us",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ikipsiliwangi.ac.id",
+    "expected": "benign"
+  },
+  {
+    "url": "http://scfta.org",
+    "expected": "benign"
+  },
+  {
+    "url": "https://newcurrentlygreetingssupps.weebly.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bethanybaptistchurch.info",
+    "expected": "benign"
+  },
+  {
+    "url": "http://some-trezrrlogin.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://net-login.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeid6wkyhpgyjxckfn3mok2y6qqmbj62bcbra46cex33tlllv66onqu.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://firefold.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fergahost.es",
+    "expected": "benign"
+  },
+  {
+    "url": "http://deudio.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://warnerbros.es",
+    "expected": "benign"
+  },
+  {
+    "url": "https://streamtv-apps.com/how/calcul.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://help-content-ledgrsu.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://plato.immo",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gskrem.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://serene-einstein-3b7a7a.netlify.app/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://fxlinks.fun",
+    "expected": "benign"
+  },
+  {
+    "url": "https://walettphntumm.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://a12-902fb4.ingress-daribow.easywp.com/OCthom/OCs",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://earningquota.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gogalaxy.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://ksomani56.github.io/Instagram-login-page/index.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://wp-static.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tsvn.fr",
+    "expected": "benign"
+  },
+  {
+    "url": "http://meta.auth.help.quasaha.click",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://adminuser.wwwteiegram.xyz/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bravisthemes.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fromthisseat.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://visitbend.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://biorul.cfd",
+    "expected": "benign"
+  },
+  {
+    "url": "https://returnprocedecdt.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://chegartevettuun.icu/pe/TBT",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://lkttoll.info/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://honor-100.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://nodenet.surge.sh/Connect.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://5fgfgfgfgrfrgg4gg.blogspot.co.id",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://lv3-luygwas-projects.vercel.app/verset.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pnevmosnab.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mtagency.vip/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://aadrprnpjg.seaegg.cn/caonima=ouyhhrmb.co.jp/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://toynews-online.biz",
+    "expected": "benign"
+  },
+  {
+    "url": "http://papuadom.id",
+    "expected": "benign"
+  },
+  {
+    "url": "http://usps.com-alterd.xin/i",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://manpowergroup.us",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpdts.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://mail.8724319-coinbase.com/review..................................................................................................................................................................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://learn--starttrezor.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://raox1.github.io/NetflixCloneLandingPage",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://lieoslwkdnrbdhis.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://metamaskolooguin.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://newestnetflixapps.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bancaribetramites.z13.web.core.windows.net/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apexminecrafthosting.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://002y.github.io/login-netflix",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://costco.com.tw",
+    "expected": "benign"
+  },
+  {
+    "url": "http://chicappa.jp",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gogetdeals.co.uk",
+    "expected": "benign"
+  },
+  {
+    "url": "https://docs.google.com/drawings/d/1q4lRnSCztgzEZ8Y27hdzlYdDBSmzP67_sEJZ7fwC_zM/edit",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://peterfever.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://sqdc.ca",
+    "expected": "benign"
+  },
+  {
+    "url": "http://xn--wgvp78a61swpe6zdozj.cn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://gazelkin.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://palmcoastgov.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ingenieriademenu.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://multifloopink.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apiabroad.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://upholdglogin-inn.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aspirasi-ndp.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hotpussypics.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://advocatenkantoor-ej.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://mail.8724319-coinbase.com/review..............................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://redcheetah.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://docs.google.com/drawings/d/1vR3FtIsZRf456JtPQCaiRtzLnzT7YPlAaDFbftf-TKE/edit",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackpbw.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pralinendeko.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://parkplacetechnologies.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://c0c0d-0cdn.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://docs.google.com/drawings/d/1eTmrEc1TBALJYkZR9cqPpcVkVL2UQyE1pxihEFKnePg/edit",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://finambank.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://fundacionjumex.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dripcasino-click1.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://kerrits.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://cchichiabais.info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://promoda.rs",
+    "expected": "benign"
+  },
+  {
+    "url": "http://wailing-hamburger-abundant.on-fleek.app/qwfkrupexhsk13.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://serrv.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ggcweb.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://perry-rhodan.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://8lkxflas1.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpggg.cc/info",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://poddeerzhka.cfd",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://bafybeib33jmmvrz6sgx5pavkyqcj47obdlj4p4yvpac3alf4joqkjjazlu.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://robbinhoodloglnii.gitbook.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://apple.c0o1mw.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://pinbo26.com:8989/financial.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://wbadieieie.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gisi-interactive.net",
+    "expected": "benign"
+  },
+  {
+    "url": "http://robert-ley.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bafybeiachyqjj2jptc2ianz2erfbe3eegc4ltkdhap4l7kocz2otgrc42e.ipfs.dweb.link",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://firmasdigitalescitas.webnode.es/servicios/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://jqfmxspvpyowz.work",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aspercasinogiris2.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://expresso.se.gov.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://informed.deliveryssg.top/l",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-parceltdhga.vip/i/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://metalblade.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bolddesk.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://p1hvk.mssg.me/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://jogadadasorte.live",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dasfamilienportal.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://179.43.140.147/banks/directing/bmo",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://www.automigrate.daspp.com/connect/index.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tenlinks.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://postworcs.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://americabank-17.netlify.app",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tidokan.com/ezahceht/hfjhgghjng/c21ja25pZ2h0QGFtcHJzZXJ2aWNlcy5jb20=",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://pneumatiky.sk",
+    "expected": "benign"
+  },
+  {
+    "url": "http://trckln.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://plumeti.fr",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pwc.co.za",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ca73970.tw1.ru",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://huafei888.site",
+    "expected": "benign"
+  },
+  {
+    "url": "http://metamaskiechrom-us.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://twittertking.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://focloir.ie",
+    "expected": "benign"
+  },
+  {
+    "url": "http://thepatriot.in",
+    "expected": "benign"
+  },
+  {
+    "url": "http://spotistar.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://telegrams-j.com/dist",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://shaw903.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://unimon.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bmnfccbyyn.duckdns.org/en",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://820vps.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://internet.gov.sa",
+    "expected": "benign"
+  },
+  {
+    "url": "http://avancial.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://my-mondiairelay.info/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://generationtux.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://r-vulkan777.fun",
+    "expected": "benign"
+  },
+  {
+    "url": "https://euyymrix.baby",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://qboku.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://picasso-diagnostic.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://www.tinyurl.com/Carrefour-926",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://datamobpro.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://testmencobarun.servebeer.com/lasso/login?loc=en_US&ssi=NoczCyIcWCXBNI9XmvwLprBSWuKCjXtnJA9cw2PLQfJHtgScUOqP7CrLF0SStka5",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://lj-remont.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://krabiwebmedia.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://comjrsfg_mri_cxliovn.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://dsfgjhdkj-s-school.teachable.com/p/terms",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://treswiacsll.webflow.io/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://trackvwq.top/us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://suman006723213.github.io/garena.reward.ff",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://telegramhv.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://aramex-moc-are.help/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://biktrix.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://sasktel3.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ibabowl.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://top-sound.com.ua",
+    "expected": "benign"
+  },
+  {
+    "url": "http://livingmyimaginedlife.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://zjfubang.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pokerdom-i7d.top",
+    "expected": "benign"
+  },
+  {
+    "url": "http://uph-old-logn.godaddysites.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://sugarplay.dlios.cc",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://clariveh.guru",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://tokenomicsmmg.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://apo.pyu.temporary.site",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://metamaganer247.tempisite.com/help8282",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://aaaabc.cc",
+    "expected": "benign"
+  },
+  {
+    "url": "https://xn--document-publisher-dn-serveri3133-dy0a.3744554.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://maneu-aid.help/uLpDc7?%20FdcjQ=lvoQnl",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cbs4.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-trackiic.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gram.edu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dewatergroep.be",
+    "expected": "benign"
+  },
+  {
+    "url": "https://websecureplatform.ath.cx/nickel-panel/nkll/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://att-107666-103202.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://the-vampire.ru",
+    "expected": "benign"
+  },
+  {
+    "url": "http://att-106588.weeblysite.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://upphhildl-loggn.godaddysites.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nccgroup.trust",
+    "expected": "benign"
+  },
+  {
+    "url": "https://cytod.pages.dev/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://338975.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cipherkey.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://britrivercloudmining.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://jazzforum.com.pl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dynalogic.eu",
+    "expected": "benign"
+  },
+  {
+    "url": "http://telvgram.band",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://storage.googleapis.com/etojt4jopo.appspot.com/21160.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-trackhrr.top/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://cinecalidad.show",
+    "expected": "benign"
+  },
+  {
+    "url": "http://omecanico.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://entremusicas.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://hermesgermany.digital",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps-trackzw.xin/i",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://robxhoodlogsin.gitbook.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://dhanaav.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ns.at",
+    "expected": "benign"
+  },
+  {
+    "url": "http://amazon-shop-yq04.onrender.com/product/woorn-t-shirt",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://sdzhenguan.com",
+    "expected": "benign"
+  },
+  {
+    "url": "https://bit.ly/4ff3B6V",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://sandiafcuarea.weebly.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://desiremarketing.io",
+    "expected": "benign"
+  },
+  {
+    "url": "http://jdxpert.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://teleigmeni.vip/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://electra-israel.co.il",
+    "expected": "benign"
+  },
+  {
+    "url": "http://dailyyouthtoday.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bosku777top.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://senadorcanedo.go.gov.br",
+    "expected": "benign"
+  },
+  {
+    "url": "http://allmovieshub.gay",
+    "expected": "benign"
+  },
+  {
+    "url": "https://apsms39842.myonlineportal.at/oauth2",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://prime.jo",
+    "expected": "benign"
+  },
+  {
+    "url": "https://rightwhale.cn/wanshidaGDF3424Qeqbnvfdg645we312WEQWE/?m=000&amp;t=000&amp;ip=0.0.0.0&amp;language=ja&amp;d=000",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://ajinelectron.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://informed-deliverciub.top/us/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://hetsptt.net.cn",
+    "expected": "benign"
+  },
+  {
+    "url": "http://pages.tempisite.com/facebooksupport-helpp-accountable-verify-next",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://barak-online.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://usps.com-tracking-helpumo.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://planner4you.net",
+    "expected": "benign"
+  },
+  {
+    "url": "https://mail.8724319-coinbase.com/review..................................................................................................................................................................................................................................................................................................................................................................",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://help--lonledgrr-livve.webflow.io",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://www1.nashfranciskato.com/uloo/on/index.html",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://bf15.daq.workers.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://nporadio4.nl",
+    "expected": "benign"
+  },
+  {
+    "url": "http://ambitious-brand.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://powerway.com.ua",
+    "expected": "benign"
+  },
+  {
+    "url": "http://aiany.org",
+    "expected": "benign"
+  },
+  {
+    "url": "https://sites.google.com/view/webactivatio/home",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://gotrendier.mx",
+    "expected": "benign"
+  },
+  {
+    "url": "http://drbtry.in",
+    "expected": "benign"
+  },
+  {
+    "url": "http://portail-decommunications.weebly.com",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://ntflxmylog.help/how/calcul.php",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://mofratnndlmd111.site",
+    "expected": "benign"
+  },
+  {
+    "url": "https://dbk.sviluppo.host/connect-dbk.de/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://usps.com-tracking-helpkvo.cc/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://thomasjackowski.com/t2dolalrwe/KS3kxmTfO73QcT3BPGBrQZLWLuG/YWNjb3VudHNwYXlhYmxlQG1hcnlhbm5zZm9vZHMuY29t",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://unipolrentalauctioncenter.it",
+    "expected": "benign"
+  },
+  {
+    "url": "https://o1x.98415781.xyz/ckbpxriw",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://telefullenvivo.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://choctaw.org",
+    "expected": "benign"
+  },
+  {
+    "url": "http://grapheine.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://linkgp.com.br",
+    "expected": "benign"
+  },
+  {
+    "url": "https://reformalutionsmessa-functions.com/xv/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://www.dunajecbiala.pl/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://lforgot.er-nf.com/aU3V88/c1.php/",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://hamaavaz.com/",
+    "expected": "malicious"
+  },
+  {
+    "url": "http://earnvisits.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://blurayufr.cam",
+    "expected": "benign"
+  },
+  {
+    "url": "http://stark-industries.solutions",
+    "expected": "benign"
+  },
+  {
+    "url": "http://tourcompass.de",
+    "expected": "benign"
+  },
+  {
+    "url": "http://letmynow.com",
+    "expected": "benign"
+  },
+  {
+    "url": "http://bitzerofusionchartfil.pages.dev",
+    "expected": "malicious"
+  },
+  {
+    "url": "https://vcsa.nabicvbk.top/",
+    "expected": "malicious"
+  }
+]

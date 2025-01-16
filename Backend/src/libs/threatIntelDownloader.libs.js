@@ -1,5 +1,6 @@
 import axios from "axios";
 import Blacklist from "../models/blacklist.model.js";
+import { parse } from "csv-parse/sync"; // Necesitarás instalar este paquete: npm install csv-parse
 
 const CONFIG = {
   BATCH_SIZE: 1000,
@@ -104,6 +105,15 @@ const processUrlBatch = async (urls, source, description) => {
   return operations;
 };
 
+const parsePhishTankCSV = (csvData) => {
+  const records = parse(csvData, {
+    columns: true,
+    skip_empty_lines: true,
+  });
+
+  return records.map((record) => record.url.trim());
+};
+
 const downloadFeed = async (feed, pool) => {
   return pool.add(async () => {
     return await RetryableOperation.execute(async () => {
@@ -136,6 +146,12 @@ const FEEDS = [
     url: "https://openphish.com/feed.txt",
     description: "Feed de phishing de código abierto",
   },
+  {
+    name: "PhishTank",
+    url: "http://data.phishtank.com/data/online-valid.csv",
+    description: "Feed de URLs verificadas de PhishTank",
+    isCSV: true, // Indicador para feeds con formato CSV
+  },
 ];
 
 const downloadThreatIntel = async () => {
@@ -152,10 +168,15 @@ const downloadThreatIntel = async () => {
     try {
       const data = await downloadFeed(feed, pool);
 
-      const urls = data.split("\n").filter((line) => {
-        const trimmed = line.trim();
-        return trimmed.length > 0 && !trimmed.startsWith("#");
-      });
+      let urls;
+      if (feed.isCSV) {
+        urls = parsePhishTankCSV(data);
+      } else {
+        urls = data.split("\n").filter((line) => {
+          const trimmed = line.trim();
+          return trimmed.length > 0 && !trimmed.startsWith("#");
+        });
+      }
 
       const dbResults = await processUrlBatch(
         urls,
@@ -171,7 +192,7 @@ const downloadThreatIntel = async () => {
       results.failed.push({
         name: feed.name,
       });
-      console.error(`Error en feed ${feed.name}`);
+      console.error(`Error en feed ${feed.name}: ${error.message}`);
     }
   });
 

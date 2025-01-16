@@ -1,7 +1,7 @@
 import downloadThreatIntel from "./threatIntelDownloader.libs.js";
 import cron from "node-cron";
 
-const task = cron.schedule("*/30 * * * *", () => {
+const task = cron.schedule("*/1 * * * *", () => {
   downloadThreatIntel()
     .then(() => console.log("Tarea ejecutada exitosamente"))
     .catch((error) =>
