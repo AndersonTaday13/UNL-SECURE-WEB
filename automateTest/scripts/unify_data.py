@@ -2,14 +2,15 @@ import json
 import random
 import os
 
-def merge_json_files(file1, file2, output_file, sample_size=500):
+def merge_json_files(file1, file2, output_file, sample_size):
     try:
         with open(file1, 'r') as f1, open(file2, 'r') as f2:
             data1 = json.load(f1)
             data2 = json.load(f2)
 
-            sample1 = random.sample(data1, min(sample_size, len(data1)))
-            sample2 = random.sample(data2, min(sample_size, len(data2)))
+            # Tomar el mismo número de muestras que se especificó al crear los archivos JSON
+            sample1 = data1  # Ya no necesitamos sample porque los datos ya están muestreados
+            sample2 = data2
 
             combined = sample1 + sample2
             random.shuffle(combined)
@@ -23,7 +24,7 @@ def merge_json_files(file1, file2, output_file, sample_size=500):
     except Exception as e:
         print(f"Error al unificar archivos: {str(e)}")
 
-def main(sample_size=500):
+def main(sample_size):  # Cambiado el valor por defecto a 2000
     script_dir = os.path.dirname(os.path.abspath(__file__))
     benign_file = os.path.join(script_dir, 'output', 'output_benign.json')
     malicious_file = os.path.join(script_dir, 'output', 'output_malicious.json')

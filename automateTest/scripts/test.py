@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import numpy as np
 
 def load_and_process_urls():
     try:
@@ -71,12 +72,12 @@ def calculate_metrics(df):
         print(f"Recall: {recall:.3f}")
         print(f"FPR: {fpr:.3f}")
         
-        return precision, recall, fpr
+        return precision, recall, fpr, TP, FP, FN, TN
     except Exception as e:
         print(f"\nError durante el cálculo de métricas: {str(e)}")
-        return None, None, None
+        return None, None, None, 0, 0, 0, 0
 
-def plot_metrics(precision, recall, fpr):
+def plot_metrics(precision, recall, fpr, total_urls):
     if precision is None or recall is None or fpr is None:
         print("No se puede generar el gráfico debido a errores en las métricas")
         return
@@ -93,14 +94,14 @@ def plot_metrics(precision, recall, fpr):
                 f'{height:.3f}',
                 ha='center', va='bottom')
     
-    plt.title("Métricas de Rendimiento del Detector")
+    plt.title(f"Métricas de Rendimiento del Detector (Total URLs: {total_urls})")
     plt.ylim(0, 1.1)
     
     # Guardar el gráfico
     script_dir = os.path.dirname(os.path.abspath(__file__))
     plot_path = os.path.join(script_dir, 'output', 'metrics_plot.png')
     plt.savefig(plot_path)
-    print(f"Gráfico guardado en: {plot_path}")
+    print(f"Gráfico de métricas guardado en: {plot_path}")
     plt.close()
 
 def main():
@@ -115,8 +116,9 @@ def main():
             print(f"Columnas presentes: {df.columns.tolist()}")
             return
 
-        precision, recall, fpr = calculate_metrics(df)
-        plot_metrics(precision, recall, fpr)
+        precision, recall, fpr, TP, FP, FN, TN = calculate_metrics(df)
+        total_urls = len(df)
+        plot_metrics(precision, recall, fpr, total_urls)
 
 if __name__ == "__main__":
     main()

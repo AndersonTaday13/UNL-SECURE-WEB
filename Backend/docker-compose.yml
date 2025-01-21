@@ -1,24 +1,25 @@
 version: '3'
 
 services:
-    server:
-        container_name: server
-        restart: always
-        build: .
-        ports:
-            - "8080:3030"
-        links:
-            - mongodb
-        volumes: 
-            - .:/usr/src/app
-        env_file:
-            - .env
-    mongodb:
-        container_name: mongodatabase
-        image: mongo
-        ports:
-            - "27017:27017"
-        volumes:
-            - ./backup:/backup
-            - ./data:/data/db
-        command: bash -c "mongod --bind_ip_all & sleep 5 && ./backup/init.sh"
+  server:
+    container_name: server
+    restart: always
+    build: .
+    ports:
+      - "8080:3030"
+    links:
+      - mongodb
+    volumes: 
+      - .:/usr/src/app
+    env_file:
+      - .env
+
+  mongodb:
+    container_name: mongodatabase
+    image: mongo
+    ports:
+      - "27019:27017"
+    volumes:
+      - ./backup:/docker-entrypoint-initdb.d
+      - ./data:/data/db
+    restart: always
