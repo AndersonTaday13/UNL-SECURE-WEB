@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/chrome": "^0.0.287",
+    "@types/chrome": "^0.0.289",
     "axios": "^1.7.9",
     "lodash": "^4.17.21",
     "lucide-react": "^0.468.0",
